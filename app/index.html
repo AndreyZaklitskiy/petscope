@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
   <!-- build:css styles/vendor.css -->
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="/node_modules/bootsdivap/dist/css/bootsdivap.min.css" type="text/css"/>
   <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.min.css" type="text/css"/>
   <!-- endbuild -->
   <!-- build:css styles/main.css -->
@@ -22,40 +22,115 @@
 <body>
 
 <header>
-  <div class="header-menu section">
-    <div class="header-logo">
-      <img src="images/petscope-logo.svg" alt="">
-    </div>
+  <div class="cont">
+    <div class="header-menu section">
+      <div class="header-logo">
+        <img src="images/petscope-logo.svg" alt="">
+      </div>
 
-    <menu class="header-list menu">
+      <menu class="header-list menu">
 
-      <li class="header-list-item menu-item"><a href="#">Главная</a></li>
-      <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
-      <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
-      <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
-      <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
+        <li class="header-list-item menu-item"><a href="#">Главная</a></li>
+        <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
+        <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
+        <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
+        <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
 
-    </menu>
-    <div class="phone">
-      <svg>
-        <use xlink:href="sprite.svg#header-phone"></use>
-      </svg>
-      <span>7 455 345 23 00</span>
-    </div>
-    <div class="hamburger hamburger--elastic" tabindex="0"
-         aria-label="Menu" role="button" aria-controls="navigation">
-      <div class="hamburger-box">
-        <div class="hamburger-inner"></div>
+      </menu>
+      <div class="phone">
+        <svg>
+          <use xlink:href="sprite.svg#header-phone"></use>
+        </svg>
+        <span>7 455 345 23 00</span>
+      </div>
+      <div class="hamburger hamburger--elastic" tabindex="0"
+           aria-label="Menu" role="button" aria-condivols="navigation">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <div class="header-btn">
+        <button class="btn btn__back-call">Обратный звонок</button>
       </div>
     </div>
-    <div class="header-btn">
-      <button class="btn btn__back-call">Обратный звонок</button>
-    </div>
-  </div>
 
-  <main class="section">
-    123
-  </main>
+    <main class="section header-main main">
+      <div class="main-message">
+        <div class="header">
+          GPS-ОШЕЙНИК
+        </div>
+        <span>PETSCOPE</span>
+        <p class="h">
+          ДЛЯ ДОМАШНИХ ПИТОМЦЕВ
+        </p>
+        <p class="p">
+          Контроль и безопасность вашего питомца во время прогулок
+        </p>
+      </div>
+      <div class="main-img">
+        <img src="images/puppy.png" alt="">
+      </div>
+      <div class="header-table">
+        <div class="header-table-row">
+          <div class="header-table-icon">
+            <svg>
+              <use xlink:href="sprite.svg#thumb-up-icon"></use>
+            </svg>
+
+          </div>
+
+
+          <p>Спокойствие за вашего друга</p>
+
+        </div>
+        <div class="header-table-row">
+          <div class="header-table-icon">
+            <svg>
+              <use xlink:href="sprite.svg#phone-icon"></use>
+            </svg>
+
+          </div>
+
+          <p>Онлайн наблюдение по телефону или с компьютера</p>
+
+        </div>
+        <div class="header-table-row">
+          <div class="header-table-icon">
+            <svg>
+              <use xlink:href="sprite.svg#loupe-icon"></use>
+            </svg>
+
+          </div>
+
+          <p>Быстрый и результативный поиск потеряшки</p>
+
+        </div>
+        <div class="header-table-row">
+          <div class="header-table-icon">
+            <svg>
+              <use xlink:href="sprite.svg#traces-icon"></use>
+            </svg>
+
+          </div>
+
+
+          <p>Установление безопасных границ для питомца</p>
+
+        </div>
+        <div class="header-table-row">
+          <div class="header-table-icon">
+            <svg>
+              <use xlink:href="sprite.svg#check-mark-icon"></use>
+            </svg>
+
+          </div>
+
+          <p>Гарантия на все ошейники на 1 год</p>
+
+        </div>
+      </div>
+    </main>
+  </div>
 </header>
 
 
@@ -78,7 +153,7 @@
 </script>
 <!-- build:js scripts/vendor.js -->
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/node_modules/bootsdivap/dist/js/bootsdivap.min.js"></script>
 <!-- endbuild -->
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
