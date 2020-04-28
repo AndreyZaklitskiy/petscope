@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-ul {
+ul, menu {
   list-style: none;
 }
 
@@ -48,14 +48,16 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  text-decoration: none;
+
   -webkit-transition: .2s;
   -moz-transition: .2s;
   -ms-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+  text-decoration: none;
   &:focus {
     outline: none;
+
   }
 }
 

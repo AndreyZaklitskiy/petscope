@@ -1,9 +1,20 @@
-console.log('\'Allo \'Allo!');
+$(function () {
+let headerList = $('.header-list');
 
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
-
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
+  $('.hamburger').on('click', function () {
+    $(this).toggleClass('is-active');
+    if($(this).hasClass('is-active')){
+      headerList.animate({top : '0', right: '0'});
+    }else {
+      // $('.header-list').animate().removeClass('active');
+      headerList.animate({top : '-100vw', right: '-100vh'});
+    }
+  });
+  $(window).resize(function() {
+    if ($(window).width() <= '800') {
+      headerList.append($('.phone'));
+    }else if ($(window).width() > '800') {
+      $('.header-btn').before($('.phone'));
+    }
+    })
+});

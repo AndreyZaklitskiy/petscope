@@ -1,7 +1,7 @@
 // modules & sections
 
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
-
+//@import "../../node_modules/hamburgers/dist/hamburgers.min.css";
 
 @import "modules/sprite";
 @import "functions";
@@ -13,14 +13,12 @@
 @import "sections/head-section";
 
 
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
-
 
 
 html {
@@ -36,15 +34,201 @@ body {
   overflow: hidden;
   min-height: 100%;
   line-height: 1.2;
-
+  max-width: 2000px;
 }
 
 
-// .icon {
-//   width: 100px;
-//   height: auto;
+.main-text {
+  font-family: $bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $text-dark;
+}
 
-//   &* {
-//     display: inline-block;
-//   }
-// }
+header {
+  text-align: center;
+}
+
+.header-menu {
+  margin: 0 160px;
+  padding-top: 43px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  width: 250px;
+  height: 57px;
+  margin-right: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  &-item {
+    margin-right: 18px;
+    font-family: $bold;
+    font-size: 16px;
+
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      position: relative;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.header-list {
+  .phone {
+    //display: none;
+  }
+}
+
+.header-list-item {
+  a {
+    padding: 15px;
+    cursor: pointer;
+  }
+}
+
+.phone {
+  color: $green;
+  margin: 0 20px;
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+    fill: $green;
+  }
+
+  span {
+    font-family: $bold;
+    font-size: 16px;
+  }
+}
+
+.btn {
+  font-family: $bold;
+  text-align: center;
+  border-radius: 50px;
+
+  &__back-call {
+    color: $green;
+    padding: 15px 38px;
+    border: 3px solid #5EAF28;
+    background-color: transparent;
+  }
+}
+
+.hamburger {
+  display: none;
+  z-index: 11;
+}
+
+.hamburger-box {
+  width: 24px;
+}
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+  width: 24px;
+  height: 4px;
+  background-color: $text-dark;
+}
+
+
+@media (max-width: 1737px) {
+  .header-logo {
+    margin-right: auto;
+  }
+  .header-list {
+    width: 100%;
+    order: 1;
+    margin-top: 22px;
+
+    &-item {
+      &:first-child {
+        margin-left: auto;
+      }
+
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .header-menu {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    .hamburger {
+      display: block;
+    }
+  }
+  .header-list {
+    margin-top: 0;
+    z-index: 10;
+    position: absolute;
+    right: -100vw;
+    top: -100vh;
+    background-color: $green;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    li {
+      margin: 15px auto;
+      &:first-child {
+        margin-top: auto;
+      }
+      &:nth-child(5) {
+        margin-bottom: auto;
+      }
+    }
+    li > a {
+      color: $white;
+    }
+
+    .phone {
+      margin: 100px auto 72px;
+      color: $white;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  .header-btn {
+    width: 100%;
+    padding-top: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    width: 158px;
+    height: 36px;
+  }
+  .btn__back-call {
+    border: 2px solid $green;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}

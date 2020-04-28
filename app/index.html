@@ -1,96 +1,85 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>petscope</title>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-    <!-- build:css styles/vendor.css -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-    <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <!-- build:js scripts/modernizr.js -->
-    <script src="scripts/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    
-    <header>
-      <div class="container">
-        
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>petscope</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.min.css" type="text/css"/>
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/modernizr.js -->
+  <script src="scripts/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body>
+
+<header>
+  <div class="header-menu">
+    <div class="header-logo">
+      <img src="images/petscope-logo.svg" alt="">
+    </div>
+
+    <menu class="header-list menu">
+
+      <li class="header-list-item menu-item"><a href="#">Главная</a></li>
+      <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
+      <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
+      <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
+      <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
+
+    </menu>
+    <div class="phone">
+      <svg>
+        <use xlink:href="sprite.svg#header-phone"></use>
+      </svg>
+      <span>7 455 345 23 00</span>
+    </div>
+    <div class="hamburger hamburger--elastic" tabindex="0"
+         aria-label="Menu" role="button" aria-controls="navigation">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
       </div>
-    </header>
+    </div>
+    <div class="header-btn">
+      <button class="btn btn__back-call">Обратный звонок</button>
+    </div>
+  </div>
 
 
-    
-
-<!-- 
-  
-<svg class="icon">
-  <use xlink:href='sprite.svg#thumb-up-icon'></use>
-</svg>
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#phone-icon'></use>
-  
-</svg>
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#loupe-icon'></use>
-  
-</svg>
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#traces-icon'></use>
-  
-</svg>
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#check-mark-icon'></use>
-</svg>
-
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#shield-icon'></use>
-</svg>
-
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#shout-icon'></use>
-</svg>
-
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#letter-icon'></use>
-</svg>
-
-<svg class="icon">
-  
-  <use xlink:href='sprite.svg#battery-icon'></use>
-</svg>
- -->
+</header>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-    <!-- build:js scripts/vendor.js -->
-    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function (b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function () {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+</script>
+<!-- build:js scripts/vendor.js -->
+<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endbuild -->
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
 </html>
