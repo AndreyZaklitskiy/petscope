@@ -10,3 +10,11 @@ $accent-green : #5EAF28;
 $green : #75B14E;
 $yellow : #FFE55D;
 $text-dark : #333333;
+
+// bootstrap container's variables
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1600px
+);

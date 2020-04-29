@@ -19,6 +19,11 @@ time, mark, audio, video {
   background: transparent;
 }
 
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
 body {
   line-height: 1;
 }
@@ -113,6 +118,12 @@ button {
   &:focus {
     outline: none;
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 ::-webkit-input-placeholder {
