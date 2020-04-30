@@ -20,7 +20,7 @@ let headerList = $('.header-list');
 });
 
 
-/*let headerHeight = $('header').height() + 'px';
+let headerHeight = $('header').height() + 'px';
 // let ss = parseInt(headerHeight);
  // let width = ;
 let w = 'calc(100vh'  + '-' + headerHeight +')';
@@ -28,4 +28,4 @@ let w = 'calc(100vh'  + '-' + headerHeight +')';
     'min-height' : w
   });
 
-console.log(w);*/
+console.log(w);
