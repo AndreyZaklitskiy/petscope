@@ -1,0 +1,13 @@
+.lost {
+  background: #F6F6F6;
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+.lost-text {
+  @extend .col-12;
+  border: 10px solid #EAE6DF;
+  padding: 45px;
+
+}

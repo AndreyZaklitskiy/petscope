@@ -18,14 +18,3 @@ let headerList = $('.header-list');
     }
     })
 });
-
-
-let headerHeight = $('header').height() + 'px';
-// let ss = parseInt(headerHeight);
- // let width = ;
-let w = 'calc(100vh'  + '-' + headerHeight +')';
-  $('.header-block').css({
-    'min-height' : w
-  });
-
-console.log(w);
