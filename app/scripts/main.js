@@ -11,10 +11,10 @@ let headerList = $('.header-list');
     }
   });
   $(window).resize(function() {
-    if ($(window).width() <= '800') {
+    if ($(window).width() <= '768') {
       headerList.append($('.phone'));
-    }else if ($(window).width() > '800') {
-      $('.header-btn').before($('.phone'));
+    }else if ($(window).width() > '768') {
+      $('.header-btn-wrap').before($('.phone'));
     }
     })
 });

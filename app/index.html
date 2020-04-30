@@ -20,21 +20,18 @@
 </head>
 <body>
 
-<header>
+<section class="header-section">
   <div class="container">
-    <div class="header-menu section">
-      <div class="header-logo">
+    <header class="header section">
+      <div class="logo">
         <img src="images/petscope-logo.svg" alt="">
       </div>
-
       <menu class="header-list menu">
-
-        <li class="header-list-item menu-item"><a href="#">Главная</a></li>
+        <li class="header-list-item menu-item active"><a href="#">Главная</a></li>
         <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
         <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
         <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
         <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
-
       </menu>
       <div class="phone">
         <svg>
@@ -48,90 +45,83 @@
           <div class="hamburger-inner"></div>
         </div>
       </div>
-      <div class="header-btn">
-        <button class="btn btn__back-call">Обратный звонок</button>
+      <div class="header-btn-wrap">
+        <button class="btn btn-header">Обратный звонок</button>
       </div>
-    </div>
+    </header>
 
-    <main class="section header-main main">
-      <div class="main-message">
-        <div class="header">
-          GPS-ОШЕЙНИК
-        </div>
+    <div class="header-block">
+      <div class="header-block-text">
+        <h1>GPS-ОШЕЙНИК</h1>
         <span>PETSCOPE</span>
-        <p class="h">
-          ДЛЯ ДОМАШНИХ ПИТОМЦЕВ
-        </p>
-        <p class="p">
-          Контроль и безопасность вашего питомца во время прогулок
-        </p>
+        <h2> ДЛЯ ДОМАШНИХ ПИТОМЦЕВ</h2>
+        <p class="big-p">Контроль и безопасность вашего питомца во время прогулок</p>
       </div>
-      <div class="main-img">
-        <img src="images/puppy.png" alt="">
-      </div>
-      <div class="header-table">
+      <div class="header-block-table header-table">
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#thumb-up-icon"></use>
             </svg>
-
           </div>
-
-
           <p>Спокойствие за вашего друга</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#phone-icon"></use>
             </svg>
-
           </div>
-
           <p>Онлайн наблюдение по телефону или с компьютера</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#loupe-icon"></use>
             </svg>
-
           </div>
-
           <p>Быстрый и результативный поиск потеряшки</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#traces-icon"></use>
             </svg>
-
           </div>
-
-
           <p>Установление безопасных границ для питомца</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#check-mark-icon"></use>
             </svg>
-
           </div>
-
           <p>Гарантия на все ошейники на 1 год</p>
-
         </div>
       </div>
-    </main>
-  </div>
-</header>
+    </div>
 
+    <form class="header-form form">
+      <h3>Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
+      <input class="name" type="text" placeholder="Ваше имя">
+      <input class="phone-number" type="text" placeholder="Ваш телефон">
+      <button class="btn btn-buy">
+        <span>
+          Заказать
+          <svg><use xlink:href="sprite.svg#paw-icon"></use></svg>
+        </span>
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<div class="section">
+  <div class="container">
+
+
+  </div>
+</div>
 <!-- build:js scripts/vendor.js -->
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
 <!-- endbuild -->
