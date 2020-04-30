@@ -1,14 +1,15 @@
-.header-section {
-  background: linear-gradient(24.64deg, rgba(255, 246, 231, 0.8) 17.73%, rgba(255, 243, 220, 0.8) 76.7%);
-  padding: 50px 0 100px;
-}
 header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-  padding-bottom: 50px;
+  background:  rgba(255, 243, 220, 0.8);
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 25px 0;
+    height: 190px;
+  }
 }
+
 .logo {
   width: 250px;
   height: 57px;
@@ -95,10 +96,23 @@ header {
   height: 4px;
   background-color: $text-dark;
 }
+/*=======header-section=======*/
+.header-section {
+  background: linear-gradient(24.64deg, rgba(255, 246, 231, 0.8) 17.73%, rgba(255, 243, 220, 0.8) 76.7%);
+  .container {
+    min-height: calc(100vh - 190px);
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 /*==========header-block============*/
 .header-block {
   @extend .row;
   margin-bottom: 50px;
+  margin-top: auto;
 }
 .header-block-text {
   @extend .col-lg-8, .col-12;
@@ -147,7 +161,8 @@ header {
     background: url("../../images/puppy.png") no-repeat;
     background-size: contain;
     position: absolute;
-    bottom: 0 ;
+    bottom: 50% ;
+    transform: translateY(50%);
     right: -100px;
     margin-top: auto;
     z-index: 1;
