@@ -9,7 +9,6 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
   <!-- build:css styles/vendor.css -->
-  <link rel="stylesheet" href="/node_modules/bootsdivap/dist/css/bootsdivap.min.css" type="text/css"/>
   <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.min.css" type="text/css"/>
   <!-- endbuild -->
   <!-- build:css styles/main.css -->
@@ -21,21 +20,18 @@
 </head>
 <body>
 
-<header>
-  <div class="cont">
-    <div class="header-menu section">
-      <div class="header-logo">
+<section class="header-section">
+  <div class="container">
+    <header class="header section">
+      <div class="logo">
         <img src="images/petscope-logo.svg" alt="">
       </div>
-
       <menu class="header-list menu">
-
-        <li class="header-list-item menu-item"><a href="#">Главная</a></li>
+        <li class="header-list-item menu-item active"><a href="#">Главная</a></li>
         <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
         <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
         <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
         <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
-
       </menu>
       <div class="phone">
         <svg>
@@ -49,111 +45,85 @@
           <div class="hamburger-inner"></div>
         </div>
       </div>
-      <div class="header-btn">
-        <button class="btn btn__back-call">Обратный звонок</button>
+      <div class="header-btn-wrap">
+        <button class="btn btn-header">Обратный звонок</button>
       </div>
-    </div>
+    </header>
 
-    <main class="section header-main main">
-      <div class="main-message">
-        <div class="header">
-          GPS-ОШЕЙНИК
-        </div>
+    <div class="header-block">
+      <div class="header-block-text">
+        <h1>GPS-ОШЕЙНИК</h1>
         <span>PETSCOPE</span>
-        <p class="h">
-          ДЛЯ ДОМАШНИХ ПИТОМЦЕВ
-        </p>
-        <p class="p">
-          Контроль и безопасность вашего питомца во время прогулок
-        </p>
+        <h2> ДЛЯ ДОМАШНИХ ПИТОМЦЕВ</h2>
+        <p class="big-p">Контроль и безопасность вашего питомца во время прогулок</p>
       </div>
-      <div class="main-img">
-        <img src="images/puppy.png" alt="">
-      </div>
-      <div class="header-table">
+      <div class="header-block-table header-table">
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#thumb-up-icon"></use>
             </svg>
-
           </div>
-
-
           <p>Спокойствие за вашего друга</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#phone-icon"></use>
             </svg>
-
           </div>
-
           <p>Онлайн наблюдение по телефону или с компьютера</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#loupe-icon"></use>
             </svg>
-
           </div>
-
           <p>Быстрый и результативный поиск потеряшки</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#traces-icon"></use>
             </svg>
-
           </div>
-
-
           <p>Установление безопасных границ для питомца</p>
-
         </div>
         <div class="header-table-row">
           <div class="header-table-icon">
             <svg>
               <use xlink:href="sprite.svg#check-mark-icon"></use>
             </svg>
-
           </div>
-
           <p>Гарантия на все ошейники на 1 год</p>
-
         </div>
       </div>
-    </main>
+    </div>
+
+    <form class="header-form form">
+      <h3>Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
+      <input class="name" type="text" placeholder="Ваше имя">
+      <input class="phone-number" type="text" placeholder="Ваш телефон">
+      <button class="btn btn-buy">
+        <span>
+          Заказать
+          <svg><use xlink:href="sprite.svg#paw-icon"></use></svg>
+        </span>
+      </button>
+    </form>
   </div>
-</header>
+</section>
 
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-  (function (b, o, i, l, e, r) {
-    b.GoogleAnalyticsObject = l;
-    b[l] || (b[l] =
-      function () {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-    b[l].l = +new Date;
-    e = o.createElement(i);
-    r = o.getElementsByTagName(i)[0];
-    e.src = 'https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e, r)
-  }(window, document, 'script', 'ga'));
-  ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');
-</script>
+<div class="section">
+  <div class="container">
+
+
+  </div>
+</div>
 <!-- build:js scripts/vendor.js -->
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/node_modules/bootsdivap/dist/js/bootsdivap.min.js"></script>
 <!-- endbuild -->
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
