@@ -133,13 +133,4 @@
     </g>
   </symbol>
 
-  <symbol id="cross-icon" viewBox="0 0 79 78">
-    <g>
-      <rect x="59.6426" y="0.335205" width="27.1002" height="82.2857" rx="13.5501"
-            transform="rotate(45 59.6426 0.335205)" fill="#FF865F"/>
-      <rect x="77.3477" y="58.52" width="27.1002" height="82.2857" rx="13.5501" transform="rotate(135 77.3477 58.52)"
-            fill="#FF865F"/>
-
-    </g>
-  </symbol>
 </svg>

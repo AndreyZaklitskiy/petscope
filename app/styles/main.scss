@@ -7,7 +7,7 @@
 
 @import "sections/header";
 @import "sections/head-section";
-@import "sections/lost";
+@import "sections/alone";
 
 html {
   position: relative;
@@ -36,7 +36,7 @@ p {
   color: $text-dark;
   line-height: 22px;
 }
-p.big-p {
+.big-p {
   font-family: $light;
   font-size: 28px;
   line-height: 44px;
@@ -72,6 +72,10 @@ h3 {
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 24px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 22px;
   }
   p {
     font-size: 16px;
