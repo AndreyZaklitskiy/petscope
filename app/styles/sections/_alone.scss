@@ -25,7 +25,7 @@
   border: 10px solid #EAE6DF;
   position: relative;
   padding: 45px 45px 45px 390px;
-  margin: auto 30px auto;
+  margin: 0 30px 100px;
   z-index: 1;
   p {
     @extend .big-p;
@@ -62,13 +62,13 @@
 /*====LIST-BLOCK*/
 .alone-list-block {
   @extend .row;
-  margin-top: 107px;
   display: flex;
 }
 .alone-header {
   @extend .col-12;
+  margin-bottom: 100px;
   h2 {
-    margin: 0 auto 115px;
+    margin: 0 auto;
     max-width: 800px;
     span {
       color: $green;
@@ -121,14 +121,14 @@
   .alone-text-block {
     border: 8px solid #EAE6DF;
     padding: 25px 15px 50px;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 0 0 150px;
     &:before {
       opacity: .6;
     }
   }
   .alone-header {
     order: 1;
+    margin-bottom: 40px;
   }
   .alone-image {
     order: 2;
