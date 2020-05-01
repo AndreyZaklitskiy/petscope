@@ -3,7 +3,7 @@
   background: #F6F6F6;
   .container {
     padding-top: 150px;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,11 +13,12 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background: url("../../images/vector-green.svg") no-repeat;
     background-size: cover;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
+    right: 0;
   }
 }
 .alone-text-block {
@@ -112,6 +113,11 @@
 
 /*======MEDIA========*/
 @media (max-width: 992px) {
+  .alone {
+    .container {
+      padding-bottom: 50px;
+    }
+  }
   .alone-text-block {
     border: 8px solid #EAE6DF;
     padding: 25px 15px 50px;

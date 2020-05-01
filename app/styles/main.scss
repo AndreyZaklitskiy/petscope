@@ -8,6 +8,8 @@
 @import "sections/header";
 @import "sections/head-section";
 @import "sections/alone";
+@import "sections/about";
+
 
 html {
   position: relative;
@@ -53,7 +55,13 @@ h3 {
   font-family: $bold;
   line-height: 29px;
 }
-
+h4 {
+  font-family: $medium;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+}
 
 
 
@@ -65,7 +73,12 @@ h3 {
   h2 {
     font-size: 30px;
   }
-
+}
+@media (max-width: 992px) {
+  h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 @media (max-width: 768px) {
   h2 {
@@ -77,6 +90,7 @@ h3 {
     font-size: 16px;
     line-height: 22px;
   }
+
   p {
     font-size: 16px;
   }
