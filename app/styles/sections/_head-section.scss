@@ -4,8 +4,9 @@ header {
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    padding: 25px 0 100px;
+    //padding: 25px 0 100px;
 
+    padding: 25px 15px 50px;
 }
 .logo {
   width: 250px;
@@ -100,7 +101,6 @@ header {
   position: relative;
   .container {
     min-height: calc(100vh);
-    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,7 +212,7 @@ header {
     font-size: 18px;
   }
 }
-/*====header-FORM*/
+/*====head-form*/
 .form {
   position: relative;
   display: flex;
@@ -274,12 +274,12 @@ header {
     }
   }
 }
-.header-form {
+.head-form {
   background: #FFFFFF;
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15);
   border-radius: 100px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 50px;
   padding: 27px 130px 37px;
   &:before {
     content: '';
@@ -351,7 +351,7 @@ header {
       }
     }
   }
-  .header-form {
+  .head-form {
     &:before {
       top: auto;
       bottom: -40px;
@@ -359,22 +359,6 @@ header {
   }
 }
 @media (max-width: 992px) {
-  .menu-item {
-    margin-right: 10px;
-  }
-  .header-block-text {
-    margin-bottom: 50px;
-    p {
-      max-width: 350px;
-    }
-    &:before {
-      opacity: 1;
-      width: 360px;
-      height: 370px;
-    }
-  }
-}
-@media (max-width: 768px) {
   header {
     .hamburger {
       display: block;
@@ -418,6 +402,23 @@ header {
     width: 100%;
     padding-top: 22px;
   }
+  .menu-item {
+    margin-right: 10px;
+  }
+  .header-block-text {
+    margin-bottom: 50px;
+    p {
+      max-width: 350px;
+    }
+    &:before {
+      opacity: 1;
+      width: 360px;
+      height: 370px;
+    }
+  }
+}
+@media (max-width: 768px) {
+
   .header-block-text {
     h1 {
       font-size: 36px;
@@ -440,7 +441,7 @@ header {
   }
 }
 @media (max-width: 568px) {
-  .header-form {
+  .head-form {
     h3 {
       font-size: 20px;
     }

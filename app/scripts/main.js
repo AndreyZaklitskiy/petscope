@@ -11,9 +11,9 @@ let headerList = $('.header-list');
     }
   });
   $(window).resize(function() {
-    if ($(window).width() <= '768') {
+    if ($(window).width() <= '992') {
       headerList.append($('.phone'));
-    }else if ($(window).width() > '768') {
+    }else if ($(window).width() > '992') {
       $('.header-btn-wrap').before($('.phone'));
     }
     })
