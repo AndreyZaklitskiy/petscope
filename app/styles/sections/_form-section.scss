@@ -1,6 +1,7 @@
 .form-section {
   .container {
     padding: 105px 0 0;
+    background-color: #FFF8ED;
   }
 }
 .form-section-img {
@@ -10,7 +11,6 @@
     width: 100%;
     height: auto;
     margin-top: auto;
-    margin-bottom: auto;
   }
 }
 .form-section-form {
@@ -42,15 +42,27 @@
 
 
 /*===MEDIA=====*/
-@media (max-width: 1335px) {
+@media (max-width: 1370px) {
   .form-section-form {
     input[type = "text"] {
-      margin-right: auto;
-      //width: 260px;
+      margin-right: 10px;
+      width: 265px;
     }
   }
 }
-
+@media (max-width: 1200px) {
+  .form-section-img {
+    img {
+      margin-bottom: auto;
+    }
+  }
+  .form-section-form {
+     input[type = "text"] {
+       margin-right: 0;
+       width: 100%;
+     }
+   }
+}
 @media (max-width: 992px) {
   .form-section {
     .container {
