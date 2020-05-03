@@ -10,6 +10,7 @@
 @import "sections/alone";
 @import "sections/about";
 @import "sections/form-section";
+@import "sections/instructions";
 
 
 html {
@@ -50,6 +51,9 @@ h2 {
   font-size: 36px;
   line-height: 44px;
   text-align: center;
+  span {
+    color: $green;
+  }
 }
 h3 {
   font-size: 24px;
