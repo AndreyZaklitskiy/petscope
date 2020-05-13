@@ -14,7 +14,6 @@
   }
 }
 .form-section-form {
-
   h2 {
     text-align: left;
     margin-bottom: 15px;
@@ -36,11 +35,21 @@
 }
 .consultation-form {
   @extend .col-lg-8;
-
 }
-
-
-
+.form-section-green {
+  background: #75B14E;
+  h2,p {
+    color: #fff;
+  }
+  .form-section-img {
+    order: 2;
+    transform: scale(-1, 1)
+  }
+  button {
+    background: #FFE55D;
+    color: #404040;
+  }
+}
 /*===MEDIA=====*/
 @media (max-width: 1370px) {
   .form-section-form {
@@ -71,6 +80,7 @@
   }
   .form-section-img {
     order: 2;
+    padding-right: 30px;
   }
   .form-section-form .input-wrap {
     padding-bottom: 50px;
@@ -86,6 +96,11 @@
     .input-wrap {
 
       padding-bottom: 20px;
+    }
+  }
+  .form-section-green {
+    .form-section-img {
+      padding-right: 170px;
     }
   }
 }

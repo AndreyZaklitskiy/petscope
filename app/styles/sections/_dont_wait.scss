@@ -1,0 +1,239 @@
+.dont_wait {
+  position: relative;
+  padding: 120px 0;
+  .container {
+    max-width: 1100px;
+  }
+
+  h2 {
+    margin-bottom: 45px;
+  }
+
+  .orange {
+    color: $orange;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    background: url(../../images/dotted.svg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
+    width: calc(897px/2);
+    height: 897px;
+  }
+}
+
+.dont_wait-header {
+  margin-bottom: 130px;
+}
+
+.dont_wait-deliver-block {
+  display: flex;
+  flex-direction: column;
+
+  table {
+    //background: url("../../images/russianmap.svg") center no-repeat;
+    width: 100%;
+    background-size: contain;
+  }
+
+  td {
+    h4, p {
+      text-align: center;
+      padding: 80px 0 10px;
+    }
+  }
+
+  .table-explanation {
+    h4 {
+      text-align: left;
+    }
+
+  }
+}
+
+.table-header-item {
+  h4 {
+    color: #72C43C;
+  }
+}
+
+.table-row {
+  //height: 90px;
+}
+
+.table-col {
+
+  //width: 271px;
+}
+
+/*======GRID=======*/
+.table {
+  position: relative;
+  margin: 0 auto 25px;
+  padding: 110px 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 270px));
+  background: url("../../images/russianmap.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.table-col {
+  border-left: 1px solid #D2D2D2;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 90px;
+  p, .row-1 {
+    text-align: center;
+  }
+  h4 {
+    color: #72C43C;
+  }
+.row-styles {
+  display: flex;
+  p {
+    margin: auto;
+  }
+  h4 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.table-col-1 {
+  h4 {
+    color: #333333;
+  }
+}
+
+.table-button {
+  background: #ECECEC;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border: none;
+  color: #72C43C;
+  max-width: 279px;
+  padding: 12px 69px 10px 30px;
+  margin: 50px auto 0;
+  position: relative;
+  z-index: 3;
+  height: 65px;
+  cursor: pointer;
+  display: flex;
+  span {
+    display: inline-block;
+    margin: auto;
+  }
+  &:after {
+    content: 'Ваш регион :';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    font-family: $medium;
+    font-size: 16px;
+    line-height: 20px;
+    color: #BCBCBC;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../../images/down-arr.svg") center no-repeat;
+    background-size: cover;
+    height: 9px;
+    width: 18px;
+  }
+}
+.table-button-block {
+  position: relative;
+  display: none;
+}
+.table-button-list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: grey;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: none;
+}
+.table-button-list-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #333333;
+  span {
+    display: inline-block;
+    font-family: $bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #72C43C;
+    max-width: 180px;
+
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+
+/*media*/
+
+@media (max-width: 1200px) {
+  .table-col {
+    //width: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dont_wait {
+    padding: 50px 0;
+    &:before {
+      left: 0;
+      transform: translateY(-175%);
+      width: calc(238px/2);
+      height: 238px;
+    }
+  }
+  .dont_wait-header {
+    margin-bottom: 75px;
+  }
+
+  .table-button-block {
+    display: block;
+  }
+  .table {
+    grid-template-columns: repeat(2, minmax(150px, 270px));
+    background-size: contain;
+    margin: 0 auto 25px;
+    padding: 50px 0;
+    .row-1 {
+      display: none;
+    }
+  }
+  .table-col {
+    border-left: none;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 60px;
+  }
+
+  .table-anim {
+    display: none;
+  }
+  .table-anim.visible {
+    display: grid;
+  }
+}
