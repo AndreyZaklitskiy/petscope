@@ -13,12 +13,20 @@ $(function () {
 
     });*/
     if ($(window).width() <= '992') {
-      headerList.closest().append($('.phone'));
+      $('footer').children(headerList).append($('.phone'));
+      $('.header-section').children(headerList).append($('.phone'));
+    } else if ($(window).width() > '992') {
+      $('footer').children('.header-btn-wrap').before($('.phone'));
+      $('.header-section').children('.header-btn-wrap').before($('.phone'));
+    }
+
+    if ($(window).width() <= '992') {
+      // headerList.closest().append($('.phone'));
       $('.instructions-list-block > h2').after($('.instructions-image'));
       $('.buy_agitation-text-even > h2').after($('.buy_agitation-image-even'));
       $('.buy_agitation-text-odd > h2').after($('.buy_agitation-image-odd'));
     } else if ($(window).width() > '992') {
-      $('.header-btn-wrap').before($('.phone'));
+      // $('.header-btn-wrap').before($('.phone'));
       $('header').children('.instructions>.container>.row').closest().prepend($('.instructions-image'));
       $('.buy_agitation>.container>.row:even').prepend($('.buy_agitation-image-even'));
       $('.buy_agitation>.container>.row:odd').append($('.buy_agitation-image-odd'));
