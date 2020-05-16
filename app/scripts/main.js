@@ -1,17 +1,32 @@
+let petscope = {
+
+  // method for initialization
+  init() {
+    for (let key in this) {
+      if (key !== 'init') this[key]();
+    }
+  },
+
+  // handler for hamburger button
+  hamburgerHandler() {
+    $('.hamburger').on('click', () => {
+      $(this).toggleClass('is-active');
+      $('.header-list').toggleClass('is-active');
+    });
+  },
+
+  // handler for table button
+  tableButtonHandler() {
+    $('.table-button').on('click', () => {
+      $('.table-button-list').slideToggle().toggleClass('open');
+    })
+  },
+
+}.init();
+
 $(function () {
   let headerList = $('.header-list');
-  $('.hamburger').on('click', function () {
-    $(this).toggleClass('is-active');
-    if ($(this).hasClass('is-active')) {
-      headerList.animate({top: '0', right: '0'});
-    } else {
-      headerList.animate({top: '-100vw', right: '-100vh'});
-    }
-  });
   function windowWidth() {
-    /*$(window).resize(function () {
-
-    });*/
     if ($(window).width() <= '992') {
       headerList.closest().append($('.phone'));
       $('.instructions-list-block > h2').after($('.instructions-image'));
@@ -26,16 +41,6 @@ $(function () {
   }
   windowWidth();
 
-  $('.table-button').on('click', function () {
-    let list = $('.table-button-list');
-    if(list.hasClass('open') == true) {
-      list.slideUp();
-      list.removeClass('open')
-    }else {
-      list.slideDown();
-      list.addClass('open')
-    }
-  })
   /*Скрипт кнопки для таблицы*/
   let btnListItem = $('.table-button-list-item');
   btnListItem.on('click', function () {

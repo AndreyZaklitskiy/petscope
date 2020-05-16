@@ -378,6 +378,15 @@ header {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    &.is-active {
+      top: 0;
+      right: 0;
+    }
     li {
       margin: 15px auto;
       &:first-child {
