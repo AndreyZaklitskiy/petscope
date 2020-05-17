@@ -15,11 +15,20 @@ let petscope = {
     });
   },
 
-  // handler for table button
+  // handlers for table buttons
   tableButtonHandler() {
     $('.table-button').on('click', () => {
       $('.table-button-list').slideToggle().toggleClass('open');
-    })
+    });
+
+    $('.table-button-list-item').on('click', function () {
+      let self = $(this),
+          text = self.children('span').text(),
+          tableColIndex = self.index() + 1;
+
+      $('.table-button > span').text(text);
+      $('.table-col').removeClass('visible').eq(tableColIndex).addClass('visible');
+    });
   },
 
 }.init();
@@ -48,28 +57,4 @@ $(function () {
     }
   }
   windowWidth();
-
-  /*Скрипт кнопки для таблицы*/
-  let btnListItem = $('.table-button-list-item');
-  btnListItem.on('click', function () {
-    let text = $(this).children('span').text();
-    let btnSpan = $('.table-button>span');
-    btnSpan.text(text);
-    let table = $('.table');
-    let th = $(this);
-    let tableCol = $('.table-col');
-    let removeVisible = tableCol.removeClass('visible');
-    if(th.hasClass('btn-list-2')) {
-      tableCol.removeClass('visible');
-      $('.table-col-2').addClass('visible');
-    } else if (th.hasClass('btn-list-3')) {
-      tableCol.removeClass('visible');
-      $('.table-col-3').addClass('visible');
-    }else if (th.hasClass('btn-list-4')) {
-      tableCol.removeClass('visible');
-      $('.table-col-4').addClass('visible');
-    }
-  })
 });
-
-// .instructions-image
