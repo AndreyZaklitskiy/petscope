@@ -1,9 +1,6 @@
 .buy_agitation {
   background: #FFF8ED;
   position: relative;
-  .container {
-
-  }
   .row {
     margin-bottom: 150px;
   }
@@ -16,13 +13,10 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: calc(897px/2);
+    width: calc(897px / 2);
     height: 897px;
   }
-  /**/
 }
-
-
 .buy_agitation-image {
   display: inline-flex;
   img {
@@ -39,9 +33,6 @@
     text-align: left;
     margin-bottom: 50px;
   }
-  p {
-    @extend .big-p;
-  }
 }
 
 @media (max-width: 992px) {
@@ -51,7 +42,7 @@
       left: auto;
       right: 0;
       height: 357px;
-      width: calc(357px/2);
+      width: calc(357px / 2);
     }
-    }
+  }
 }

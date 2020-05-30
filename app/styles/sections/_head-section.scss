@@ -19,7 +19,6 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-
   .phone {
     display: none;
   }
@@ -37,7 +36,6 @@ header {
     cursor: pointer;
   }
 }
-/*========ACTIVE=========*/
 .menu-item.active {
   &:after {
     content: '';
@@ -53,7 +51,6 @@ header {
     border-radius: 50px;
   }
 }
-
 .phone {
   color: $green;
   margin: 0 20px;
@@ -79,7 +76,6 @@ header {
     background-color: transparent;
   }
 }
-//====HAMBURGER/гамбургер=========
 .hamburger {
   display: none;
   z-index: 11;
@@ -94,10 +90,8 @@ header {
   height: 4px;
   background-color: $text-dark;
 }
-/*=======header-section=======*/
 .header-section {
   background:  rgba(255, 243, 220, 0.8);
-  //background: linear-gradient(24.64deg, rgba(255, 246, 231, 0.9) 17.73%, rgba(255, 243, 220, 0.8) 76.7%);
   position: relative;
   padding-bottom: 100px;
   .container {
@@ -117,7 +111,6 @@ header {
     height: 262px;
   }
 }
-/*==========header-block============*/
 .header-block {
   @extend .row;
   margin: auto 0;
@@ -177,7 +170,6 @@ header {
     z-index: 1;
   }
 }
-/*========header-table=======*/
 .header-table {
   @extend .col-lg-4, .col-12;
   margin-left: auto;
@@ -212,7 +204,6 @@ header {
     font-size: 18px;
   }
 }
-/*====head-form*/
 .form {
   position: relative;
   display: flex;
@@ -293,7 +284,7 @@ header {
     height: 268px;
   }
 }
-/*=====media=========*/
+
 @media (max-width: 1600px) {
   .logo {
     margin-right: auto;
@@ -302,9 +293,6 @@ header {
     width: 100%;
     order: 1;
     margin-top: 22px;
-    &-item {
-
-    }
   }
   .header-block-text {
     &:before {
@@ -349,6 +337,9 @@ header {
   }
 }
 @media (max-width: 992px) {
+  .header-section {
+    padding-bottom: 50px;
+  }
   header {
     .hamburger {
       display: block;
@@ -390,12 +381,6 @@ header {
     }
     li {
       margin: 15px auto;
-      /*&:first-child {
-        margin-top: auto;
-      }
-      &:nth-child(5) {
-        margin-bottom: auto;
-      }*/
     }
     li > a {
       color: $white;
@@ -405,7 +390,6 @@ header {
       bottom: 70px;
       margin: 0 auto;
       display: block;
-      //margin: 100px auto 72px;
       color: $white;
       svg {
         fill: $white;

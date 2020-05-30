@@ -28,7 +28,6 @@ footer header{
     }
   }
 }
-
 footer {
   li.header-list-item.active {
     &:after {
@@ -36,7 +35,6 @@ footer {
     }
   }
 }
-
 
 @media (max-width: 1200px) {
   footer header {

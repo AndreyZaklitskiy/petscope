@@ -1,12 +1,10 @@
 @import "variables";
 @import "modules/bootstrap-grid";
-//@import "modules/bootstrap-b";
 @import "modules/sprite";
 @import "functions";
 @import "reset";
 @import "fonts";
 
-@import "sections/header";
 @import "sections/head-section";
 @import "sections/alone";
 @import "sections/about";
@@ -17,15 +15,11 @@
 @import "sections/dont_wait";
 @import "sections/footer";
 
-
-
-
 html {
   position: relative;
   height: 100vh;
   overflow-x: hidden;
 }
-
 body {
   display: flex;
   position: relative;
@@ -34,7 +28,6 @@ body {
   min-height: 100%;
   line-height: 1.2;
 }
-
 .main-text {
   font-family: $bold;
   font-size: 36px;
@@ -75,12 +68,6 @@ h4 {
   color: #313131;
 }
 
-
-
-
-
-
-/*========MEDIA=========*/
 @media (max-width: 1200px) {
   h2 {
     font-size: 30px;
@@ -102,12 +89,10 @@ h4 {
     font-size: 16px;
     line-height: 22px;
   }
-
   p {
     font-size: 16px;
   }
   p.big-p {
-    //font-size: 20px;
     font-size: 16px;
     line-height: 22px;
   }

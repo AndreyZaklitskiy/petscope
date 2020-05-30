@@ -17,10 +17,6 @@
     text-align: left;
     margin-bottom: 70px;
   }
-
-}
-.instructions-list {
-
 }
 .instructions-list-item {
   display: inline-flex;
@@ -52,15 +48,12 @@
   }
 }
 
-
-/*===MEDIA====*/
 @media (max-width: 992px) {
   .instructions {
     padding: 90px 0;
   }
   .instructions-list-block {
     h2 {
-
       margin-bottom: 10px;
     }
   }

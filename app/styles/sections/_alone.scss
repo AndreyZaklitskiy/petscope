@@ -4,7 +4,6 @@
   .container {
     padding-top: 150px;
     padding-bottom: 200px;
-    //min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -52,14 +51,12 @@
   }
   &:after {
     background: url("../../images/hand.png") no-repeat;
-    //background-size: contain;
     width: 687px;
     height: 348px;
     top: -307px;
     right: -235px;
   }
 }
-/*====LIST-BLOCK*/
 .alone-list-block {
   @extend .row;
   display: flex;
@@ -108,10 +105,6 @@
   }
 }
 
-
-
-
-/*======MEDIA========*/
 @media (max-width: 992px) {
   .alone {
     .container {
