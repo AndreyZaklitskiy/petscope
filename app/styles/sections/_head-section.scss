@@ -1,11 +1,8 @@
 header {
-  //
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    //padding: 25px 0 100px;
-
     padding: 25px 15px 50px;
 }
 .logo {
@@ -20,7 +17,12 @@ header {
 .menu {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
+
+  .phone {
+    display: none;
+  }
 }
 .menu-item {
   position: relative;
@@ -33,9 +35,6 @@ header {
     position: relative;
     padding: 15px;
     cursor: pointer;
-  }
-  &:last-child {
-    margin-right: 0;
   }
 }
 /*========ACTIVE=========*/
@@ -54,6 +53,7 @@ header {
     border-radius: 50px;
   }
 }
+
 .phone {
   color: $green;
   margin: 0 20px;
@@ -293,8 +293,6 @@ header {
     height: 268px;
   }
 }
-
-
 /*=====media=========*/
 @media (max-width: 1600px) {
   .logo {
@@ -304,15 +302,8 @@ header {
     width: 100%;
     order: 1;
     margin-top: 22px;
-
     &-item {
-      &:first-child {
-        margin-left: auto;
-      }
 
-      &:last-child {
-        margin-right: auto;
-      }
     }
   }
   .header-block-text {
@@ -333,7 +324,6 @@ header {
       margin-bottom: 40px;
     }
   }
-
   .form {
     border-radius: 30px;
     padding: 36px 33px 57px;
@@ -362,8 +352,18 @@ header {
   header {
     .hamburger {
       display: block;
+      z-index: 100;
+      &.is-active {
+        position: fixed;
+        right: 30px;
+        top: 30px;
+      }
     }
-  }.menu-item.active {
+    .phone {
+      display: none;
+    }
+  }
+  .menu-item.active {
      &:after {
        display: none;
      }
@@ -386,21 +386,26 @@ header {
     &.is-active {
       top: 0;
       right: 0;
+      z-index: 99;
     }
     li {
       margin: 15px auto;
-      &:first-child {
+      /*&:first-child {
         margin-top: auto;
       }
       &:nth-child(5) {
         margin-bottom: auto;
-      }
+      }*/
     }
     li > a {
       color: $white;
     }
     .phone {
-      margin: 100px auto 72px;
+      position: absolute;
+      bottom: 70px;
+      margin: 0 auto;
+      display: block;
+      //margin: 100px auto 72px;
       color: $white;
       svg {
         fill: $white;
@@ -427,7 +432,6 @@ header {
   }
 }
 @media (max-width: 768px) {
-
   .header-block-text {
     h1 {
       font-size: 36px;
@@ -508,8 +512,7 @@ header {
     }
   }
 }
-@media (max-width: 480px) {
-
+@media (max-width: 320px) {
   .header-block-text {
     h1 {
       font-size: 30px;

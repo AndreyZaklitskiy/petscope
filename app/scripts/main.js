@@ -6,15 +6,13 @@ let petscope = {
       if (key !== 'init') this[key]();
     }
   },
-
   // handler for hamburger button
   hamburgerHandler() {
     $('.hamburger').on('click', () => {
-      $(this).toggleClass('is-active');
+      $('.hamburger').toggleClass('is-active');
       $('.header-list').toggleClass('is-active');
     });
   },
-
   // handlers for table buttons
   tableButtonHandler() {
     $('.table-button').on('click', () => {
@@ -36,13 +34,13 @@ let petscope = {
 $(function () {
   let headerList = $('.header-list');
   function windowWidth() {
-    if ($(window).width() <= '992') {
+    /*if ($(window).width() <= '992') {
       $('footer').children(headerList).append($('.phone'));
       $('.header-section').children(headerList).append($('.phone'));
     } else if ($(window).width() > '992') {
       $('footer').children('.header-btn-wrap').before($('.phone'));
       $('.header-section').children('.header-btn-wrap').before($('.phone'));
-    }
+    }*/
 
     if ($(window).width() <= '992') {
       // headerList.closest().append($('.phone'));
