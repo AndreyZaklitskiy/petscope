@@ -24,11 +24,35 @@
   position: relative;
   text-align: center;
   margin-bottom: 80px;
-  svg {
+  padding-top: 170px;
+  &:before {
+    @include before-icon();
     width: 80px;
-    height: auto;
-    max-height: 80px;
-    margin: 0 auto 90px;
+    height: 80px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-50%);
+  }
+  &:nth-child(1) {
+    &:before {
+      background: url(../../images/gward-icon.png) no-repeat center center;
+    }
+  }
+  &:nth-child(2) {
+    &:before {
+      background: url(../../images/autoMessage-icon.png) no-repeat center center;
+    }
+  }
+  &:nth-child(3) {
+    &:before {
+      background: url(../../images/mail-icon.png) no-repeat center center;
+    }
+  }
+  &:nth-child(4) {
+    &:before {
+      background: url(../../images/acum-icon.png) no-repeat center center;
+    }
   }
   h4 {
     position: absolute;
@@ -41,7 +65,6 @@
     text-align: left;
   }
 }
-
 @media (max-width: 992px) {
   .about_collar {
     background: none;
@@ -54,10 +77,6 @@
     position: relative;
     text-align: center;
     margin-bottom: 50px;
-    svg {
-      margin: 0 auto 90px;
-
-    }
     h4 {
       margin-bottom: 20px;
     }

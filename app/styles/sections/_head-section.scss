@@ -1,3 +1,16 @@
+@mixin before-icon {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-size: contain;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -21,6 +34,15 @@ header {
   margin: 0 auto;
   .phone {
     display: none;
+    span {
+      &:before {
+        @include before-icon();
+        width: 24px;
+        height: 24px;
+        left: calc(-24px - 11px);
+        background-image: url(../../images/phone-white-icon.png);
+      }
+    }
   }
 }
 .menu-item {
@@ -52,17 +74,20 @@ header {
   }
 }
 .phone {
+  position: relative;
   color: $green;
   margin: 0 20px;
-  svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 11px;
-    fill: $green;
-  }
   span {
+    position: relative;
     font-family: $bold;
     font-size: 16px;
+    &:before {
+      @include before-icon();
+      width: 24px;
+      height: 24px;
+      left: calc(-24px - 11px);
+      background-image: url(../../images/phone-icon.png);
+    }
   }
 }
 .btn {
@@ -180,22 +205,46 @@ header {
   width: 347px;
   z-index: 5;
   &-row {
+    position: relative;
     display: inline-flex;
     align-items: center;
     background-color: rgba(240, 231, 214, .7);;
     margin-bottom: 10px;
     min-height: 96px;
+    &:before {
+      @include before-icon();
+      width: 50px;
+      height: 50px;
+      left: 15px;
+    }
+    &:nth-child(1) {
+      &:before {
+        background: url(../../images/fingerUp.png) no-repeat center center;
+      }
+     }
+    &:nth-child(2) {
+      &:before {
+        background: url(../../images/smartphone-icon.png) no-repeat center center;
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        background: url(../../images/loop-icon.png) no-repeat center center;
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        background: url(../../images/sled-icon.png) no-repeat center center;
+      }
+    }
+    &:nth-child(5) {
+      &:before {
+        background: url(../../images/garanty-icon.png) no-repeat center center;
+      }
+    }
   }
   &-icon {
     position: relative;
-    svg {
-      fill: #333333;
-      position: absolute;
-      display: inline-block;
-      width: 50px;
-      top: -75px;
-      left: 15px;
-    }
   }
   p {
     padding: 10px 32px 10px 98px;
@@ -257,11 +306,18 @@ header {
     background: #FFE55D;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     color: #353535;
-    svg {
-      margin-left: 15px;
-      height: 25px;
-      width: 25px;
-      fill: #424037;
+
+    span {
+      position: relative;
+      margin-right: 30px;
+      &:before {
+        @include before-icon();
+        width: 20px;
+        height: 20px;
+        right: -30px;
+        background: url(../../images/lapa-icon.png) no-repeat center center;
+        background-size: contain;
+      }
     }
   }
 }
@@ -391,9 +447,6 @@ header {
       margin: 0 auto;
       display: block;
       color: $white;
-      svg {
-        fill: $white;
-      }
     }
   }
   .header-btn-wrap {
@@ -461,10 +514,6 @@ header {
     button {
       font-size: 20px;
       padding: 21px 45px;
-      svg {
-        height: 20px;
-        width: 20px;
-      }
     }
     &:before {
       width: 140px;

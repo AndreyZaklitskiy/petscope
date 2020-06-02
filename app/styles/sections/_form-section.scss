@@ -35,6 +35,13 @@
   button {
     background-color: $accent-green;
     color: $white;
+    span {
+      margin-left: auto;
+      margin-right: auto;
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 .consultation-form {
