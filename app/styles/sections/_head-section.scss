@@ -475,6 +475,9 @@ header {
   }
 }
 @media (max-width: 480px) {
+  header {
+    padding: 25px 15px 35px;
+  }
   .logo {
     width: 158px;
     height: 36px;

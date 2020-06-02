@@ -14,6 +14,7 @@
   }
 }
 .form-section-form {
+  padding: 73px 33px 21px;
   h2 {
     text-align: left;
     margin-bottom: 15px;
@@ -27,6 +28,9 @@
   .input-wrap {
     padding-bottom: 100px;
     margin-right: auto;
+    input {
+      background: #EDE7DE;
+    }
   }
   button {
     background-color: $accent-green;
@@ -38,6 +42,9 @@
 }
 .form-section-green {
   background: #75B14E;
+  .container {
+    padding: 0 15px 0;
+  }
   h2,p {
     color: #fff;
   }
@@ -51,11 +58,11 @@
   }
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 1500px) {
   .form-section-form {
     input[type = "text"] {
       margin-right: 10px;
-      width: 250px;
+      width: 230px;
     }
   }
 }
@@ -76,6 +83,11 @@
   .form-section {
     .container {
       padding: 75px 0 0;
+    }
+  }
+  .form-section-green {
+    .container {
+      padding: 0 0 0;
     }
   }
   .form-section-img {
