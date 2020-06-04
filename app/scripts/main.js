@@ -28,6 +28,30 @@ let petscope = {
       $('.table-col').removeClass('visible').eq(tableColIndex).addClass('visible');
     });
   },
+  //forms validation
+  formsValidation() {
+    const phone = $('.phone-input');
+    const name = $('.name-input');
+
+    phone.on('keydown', function (event) {
+      let isDigit = false;
+      let isDash = false;
+      let isControl = false;
+
+      if (event.key >= 0 || event.key <= 9) {
+        isDigit = true;
+      }
+      if (event.key == '-') {
+        isDash = true;
+      }
+      if (event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace') {
+        isControl = true;
+      }
+      if (isDigit == false && isDash == false && isControl == false) {
+        event.preventDefault();
+      }
+    });
+  },
 }.init();
 $(function () {
   let headerList = $('.header-list');
