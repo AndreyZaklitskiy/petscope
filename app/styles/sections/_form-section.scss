@@ -5,7 +5,13 @@
   }
 }
 .form-section-img {
-  @extend .col-lg-4;
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  };
+  @include media-breakpoint-down(md) {
+    @include make-col(12);
+  };
   display: inline-flex;
   img {
     width: 100%;
@@ -45,7 +51,13 @@
   }
 }
 .consultation-form {
-  @extend .col-lg-8;
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+  };
+  @include media-breakpoint-down(md) {
+    @include make-col(12);
+  };
 }
 .form-section-green {
   background: #75B14E;

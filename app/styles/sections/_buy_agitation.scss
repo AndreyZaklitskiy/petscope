@@ -2,11 +2,9 @@
   background: #FFF8ED;
   position: relative;
   padding: 175px 0 0;
-
   .row {
     margin-bottom: 150px;
   }
-
   &:before {
     content: '';
     display: inline-block;
@@ -20,22 +18,18 @@
     height: 897px;
   }
 }
-
 .buy_agitation-image {
   display: inline-flex;
-
   img {
     width: 100%;
     height: auto;
     margin: auto;
   }
 }
-
 .buy_agitation-text {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-
   h2 {
     text-align: left;
     margin-bottom: 50px;
@@ -47,7 +41,6 @@
     padding: 78px 0 0;
   }
 }
-
 @media (max-width: 992px) {
   .buy_agitation {
     &:before {
@@ -59,7 +52,6 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .buy_agitation {
     .container {

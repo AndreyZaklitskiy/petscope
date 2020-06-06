@@ -58,11 +58,12 @@
   }
 }
 .alone-list-block {
-  @extend .row;
+  @include make-row();
   display: flex;
 }
 .alone-header {
-  @extend .col-12;
+  @include make-col-ready();
+  @include make-col(12);
   margin-bottom: 100px;
   h2 {
     margin: 0 auto;
@@ -73,7 +74,10 @@
   }
 }
 .alone-list {
-  @extend .col-lg-5;
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(5);
+  };
   margin: auto 0;
   &-item {
     position: relative;
@@ -97,7 +101,13 @@
   }
 }
 .alone-image {
-  @extend .col-lg-7;
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(7);
+  };
+  @include media-breakpoint-down(md) {
+    @include make-col(12);
+  };
   display: flex;
   img {
     width: auto;
