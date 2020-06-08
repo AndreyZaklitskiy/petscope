@@ -1,7 +1,8 @@
 .about {
   padding: 50px 0;
   position: relative;
-  background: url("../../images/map.svg") $green center no-repeat;
+  background: url("../../images/map.svg") $green no-repeat;
+  background-position: center 10%;
   background-size: contain;
   &:before {
     content: '';
@@ -17,7 +18,7 @@
   }
 }
 .about-map-block {
-  padding: 150px 0 200px;
+  padding: 100px 0 200px;
   position: relative;
   
   .container {
