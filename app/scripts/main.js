@@ -52,8 +52,12 @@ let petscope = {
       }
     });
   },
+  buttonClickEffect() {
+    // $('').event.preventDefault();
+  }
 }.init();
 $(function () {
+  AOS.init();
   let headerList = $('.header-list');
   function windowWidth() {
     if ($(window).width() <= '992') {

@@ -9,6 +9,7 @@ const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
+// const Spritesmith = require('spritesmith');
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -18,6 +19,25 @@ const port = argv.port || 9000;
 const isProd = process.env.NODE_ENV === 'production';
 const isTest = process.env.NODE_ENV === 'test';
 const isDev = !isProd && !isTest;
+
+// var sprites = '/app/images/sprites/*.png';
+
+
+  // Spritesmith.run({
+  //   src: sprites,
+  //   padding : 1
+  // }, 
+  //   function handleResult (err, result) {
+  //     result.image; // Buffer representation of image
+  //     result.coordinates; // Object mapping filename to {x, y, width, height} of image
+  //     result.properties; // Object with metadata about spritesheet {width, height}
+  
+  //     // Output the image
+  //   fs.writeFileSync(__dirname + '/alt-diagonal.png', result.image);
+  // });
+
+
+
 
 function styles() {
   return src('app/styles/*.scss')

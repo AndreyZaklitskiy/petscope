@@ -1,7 +1,8 @@
 .about {
-  background-color: $green;
   padding: 50px 0;
   position: relative;
+  background: url("../../images/map.svg") $green center no-repeat;
+  background-size: contain;
   &:before {
     content: '';
     display: block;
@@ -16,10 +17,9 @@
   }
 }
 .about-map-block {
-  padding: 100px 0 200px;
+  padding: 150px 0 200px;
   position: relative;
-  background: url("../../images/map.svg") center no-repeat;
-  background-size: cover;
+  
   .container {
     min-height: 40vh;
     display: flex;
@@ -57,6 +57,7 @@
       background-size: contain;
       width: 256px;
       height: 346px;
+      animation: jump 1s ease infinite;
     }
   }
 }
@@ -69,13 +70,18 @@
   }
 }
 .about-card {
+  min-height: 255px;
   padding: 40px 35px;
   background-color: #fff;
   margin-bottom: 30px;
   h4 {
     margin-bottom: 40px;
   }
+   p {
+    line-height: 28px;
+   }
 }
+
 @media (max-width: 992px) {
   .about {
     &:before {

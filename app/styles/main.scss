@@ -1,5 +1,6 @@
 @import "variables";
 @import "modules/bootstrap-grid";
+@import "../../node_modules/aos/src/sass/aos.scss";
 @import "modules/sprite";
 @import "functions";
 @import "reset";
@@ -67,6 +68,19 @@ h4 {
   line-height: 24px;
   color: #313131;
 }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 @media (max-width: 1200px) {
   h2 {
