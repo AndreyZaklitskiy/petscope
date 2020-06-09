@@ -32,12 +32,11 @@ let petscope = {
   formsValidation() {
     const phone = $('.phone-input');
     const name = $('.name-input');
-
+    const formBtn = $('form.form button');
     phone.on('keydown', function (event) {
       let isDigit = false;
       let isDash = false;
       let isControl = false;
-
       if (event.key >= 0 || event.key <= 9) {
         isDigit = true;
       }
@@ -51,10 +50,20 @@ let petscope = {
         event.preventDefault();
       }
     });
+    /*
+    formBtn.on('click', function(event){
+       event.preventDefault();
+       
+      if(name != /[a-zA-Zа-яА-Я]/){
+        name.css({'border': '3px solid red'});
+        console.log(name.value);
+      }else {
+        name.css({'border': 'none'});
+      }
+
+    })
+    */
   },
-  buttonClickEffect() {
-    // $('').event.preventDefault();
-  }
 }.init();
 $(function () {
   AOS.init();
