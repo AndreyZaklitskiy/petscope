@@ -6,6 +6,11 @@ let petscope = {
       if (key !== 'init') this[key]();
     }
   },
+  discharge() {
+    $('a, button').on('click', () => {
+      event.preventDefault();
+    });
+  },
   // handler for hamburger button
   hamburgerHandler() {
     $('.hamburger').on('click', () => {
@@ -50,19 +55,6 @@ let petscope = {
         event.preventDefault();
       }
     });
-    /*
-    formBtn.on('click', function(event){
-       event.preventDefault();
-       
-      if(name != /[a-zA-Zа-яА-Я]/){
-        name.css({'border': '3px solid red'});
-        console.log(name.value);
-      }else {
-        name.css({'border': 'none'});
-      }
-
-    })
-    */
   },
 }.init();
 $(function () {

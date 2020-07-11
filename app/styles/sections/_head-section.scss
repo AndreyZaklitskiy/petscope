@@ -33,7 +33,7 @@ header {
   margin: 0 auto;
   .phone {
     display: none;
-    span {
+    a {
       &:before {
         @include before-icon();
         width: 24px;
@@ -74,9 +74,10 @@ header {
 }
 .phone {
   position: relative;
-  color: $green;
+  
   margin: 0 20px;
-  span {
+  a {
+    color: $green;
     position: relative;
     font-family: $bold;
     font-size: 16px;
@@ -278,7 +279,7 @@ header {
     width: 100%;
     margin-bottom: 29px;
   }
-  input[type='text'] {
+  input[type='text'], input[type='tel'] {
     outline:none;
     width: 287px;
     height: 71px;
@@ -385,7 +386,7 @@ header {
     border-radius: 30px;
     padding: 36px 33px 57px;
     flex-direction: column;
-    input[type='text'] {
+    input[type='text'], input[type='tel'] {
       width: 100%;
       margin-right: 0;
       margin-bottom: 33px;
@@ -508,7 +509,7 @@ header {
     h3 {
       font-size: 20px;
     }
-    input[type='text'] {
+    input[type='text'], input[type='tel'] {
       font-size: 20px;
       padding: 10px 30px;
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
