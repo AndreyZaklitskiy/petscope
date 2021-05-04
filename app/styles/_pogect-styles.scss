@@ -1,0 +1,102 @@
+html {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  line-height: 1.2;
+}
+.main-text {
+  font-family: $bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: $text-dark;
+}
+p {
+  font-size: 18px;
+  font-family: $regular;
+  color: $text-dark;
+  line-height: 22px;
+}
+.big-p {
+  font-family: $light;
+  font-size: 28px;
+  line-height: 44px;
+}
+h2 {
+  color: $text-dark;
+  font-family: $bold;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  span {
+    color: $green;
+  }
+}
+h3 {
+  font-size: 24px;
+  font-family: $bold;
+  line-height: 29px;
+}
+h4 {
+  font-family: $medium;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 992px) {
+  h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
+  p.big-p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .btn-header {
+    border: 2px solid $green;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}

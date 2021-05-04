@@ -5,18 +5,10 @@
   <meta name="description" content="">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>petscope</title>
+  <title>Petscope</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  <!-- build:css styles/vendor.css -->
-  <link rel="stylesheet" href="/node_modules/hamburgers/dist/hamburgers.min.css" type="text/css"/>
-  <!-- endbuild -->
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-  <!-- build:js scripts/modernizr.js -->
-  <script src="scripts/modernizr.js"></script>
-  <!-- endbuild -->
+
 </head>
 <body>
 <section class="header-section">
@@ -49,13 +41,13 @@
       </div>
     </header>
     <div class="header-block">
-      <div class="header-block-text" data-aos="fade-right">
+      <div class="header-block-text">
         <h1>GPS-ОШЕЙНИК</h1>
         <span>PETSCOPE</span>
         <h2> ДЛЯ ДОМАШНИХ ПИТОМЦЕВ</h2>
         <p class="big-p">Контроль и безопасность вашего питомца во время прогулок</p>
       </div>
-      <div class="header-block-table header-table" data-aos="fade-up" data-aos-delay="200">
+      <div class="header-block-table header-table">
         <div class="header-table-row">
           <p>Спокойствие за вашего друга</p>
         </div>
@@ -74,10 +66,10 @@
       </div>
     </div>
 
-    <form class="head-form form" data-aos="fade-up" data-aos-delay="400">
+    <form id="form" class="head-form form">
       <h3>Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
       <input class="name name-input" type="text" placeholder="Ваше имя">
-      <input class="phone-number phone-input" type="text" placeholder="Ваш телефон">
+      <input class="phone-number phone-input _req" type="text" placeholder="Ваш телефон">
       <button type="submit" class="btn btn-buy">
         <span>Заказать</span>
       </button>
@@ -86,7 +78,7 @@
 </section>
 <section class="alone">
   <div class="container">
-    <div class="alone-text-block" data-aos="fade-up">
+    <div class="alone-text-block">
       <p>
         Наши четвероногие друзья очень свободолюбивы. Мы не можем всегда держать их на коротком поводке. Им нужна
         прогулка, пробежка, новые запахи. Мы пускаем их с поводка и всегда в напряжении, чтобы они не сбежали.
@@ -96,12 +88,12 @@
       </h3>
     </div>
     <div class="alone-list-block" >
-      <div class="alone-header" data-aos="fade-up" data-aos-delay="200">
+      <div class="alone-header">
         <h2>
           ЧТО ОЖИДАЕТ ВАШЕГО ПИТОМЦА ПОТЕРЯВШЕГОСЯ БЕЗ <span>GPS-ОШЕЙНИКА</span>
         </h2>
       </div>
-      <ul class="alone-list" data-aos="fade-up" data-aos-delay="500">
+      <ul class="alone-list">
         <li class="alone-list-item">
           <p>
             Бродячая жизнь в поисках утраченного дома
@@ -123,7 +115,7 @@
           </p>
         </li>
       </ul>
-      <div class="alone-image" data-aos="zoom-in" data-aos-delay="900">
+      <div class="alone-image">
         <img src="images/alone.png" alt="">
       </div>
     </div>
@@ -145,9 +137,9 @@
   <div class="about-cards-block">
     <div class="container">
       <div class="row">
-        <h3 data-aos="fade-up">ЧТО ДЕЛАЕТ GPS-ОШЕЙНИК?</h3>
+        <h3>ЧТО ДЕЛАЕТ GPS-ОШЕЙНИК?</h3>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" >
+          <div class="about-card">
             <h4>
               Следит за животным в режиме онлайн
             </h4>
@@ -157,7 +149,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-card">
             <h4>
               Сохраняет историю перемещений
             </h4>
@@ -166,7 +158,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="about-card">
             <h4>
               Отслеживает пройденную дистанцию
             </h4>
@@ -176,7 +168,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="about-card">
             <h4>
               Автоматически оповещает владельца
             </h4>
@@ -186,7 +178,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" data-aos-delay="800">
+          <div class="about-card">
             <h4>
               Позволяет установить границы территории
             </h4>
@@ -196,7 +188,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
-          <div class="about-card" data-aos="fade-up" data-aos-delay="1000">
+          <div class="about-card">
             <h4>
               Оповещает о нарушенных границах
             </h4>
@@ -215,13 +207,13 @@
       <div class="form-section-img">
         <img src="images/form-dog.png" alt="">
       </div>
-      <form class="form-section-form form consultation-form" action="">
-        <h2 data-aos="fade-left" data-aos-delay="100">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ПОВОДУ ПРИМЕНЕНИЯ GPS-ОШЕЙНИКА</h2>
-        <p data-aos="fade-left" data-aos-delay="300">Оставьте свои контакты, и мы свяжемся с вами в течение часа.</p>
+      <form id="form" class="form-section-form form consultation-form" action="">
+        <h>ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ПОВОДУ ПРИМЕНЕНИЯ GPS-ОШЕЙНИКА</h2>
+        <p>Оставьте свои контакты, и мы свяжемся с вами в течение часа.</p>
         <div class="input-wrap">
-          <input name="name" class="name-input" type="text" placeholder="Ваше имя" data-aos="fade-left" data-aos-delay="500">
-          <input name="phone" class="phone-input" type="tel" placeholder="Ваш телефон" data-aos="fade-left" data-aos-delay="700">
-          <button type="submit" class="btn" data-aos="fade-left" data-aos-delay="900">
+          <input name="name" class="name-input" type="text" placeholder="Ваше имя">
+          <input name="phone" class="phone-input _req" type="tel" placeholder="Ваш телефон">
+          <button type="submit" class="btn">
             <span>Отправить</span>
           </button>
         </div>
@@ -232,14 +224,14 @@
 <section class="instructions">
   <div class="container">
     <div class="row">
-      <div class="instructions-image" data-aos="zoom-in" data-aos-delay="100">
+      <div class="instructions-image">
         <img src="images/osheinik.jpg" alt="Ошейник">
       </div>
       <div class="instructions-list-block">
-        <h2 data-aos="fade-up" data-aos-delay="300">
+        <h2>
           УСТРОИСТВО НЕ БОЛЬШЕ СПИЧЕЧЕНОГО КОРОБКА <span>И В УПРАВЛЕНИЕ НЕ СЛОЖНЕЕ ДЕТСКОЙ ИГРУШКИ</span>
         </h2>
-        <ol class="instructions-list" data-aos="fade-up" data-aos-delay="600">
+        <ol class="instructions-list">
           <li class="instructions-list-item">
             <span class="num">01.</span>
             <p>Вы получаете GPS-маячок, который можно использовать в комплекте с предлагающимся или уже имеющимся
@@ -260,7 +252,7 @@
           </li>
         </ol>
       </div>
-      <div class="if_no_internet alone-text-block" data-aos="fade-up">
+      <div class="if_no_internet alone-text-block">
         <h3>Если нет доступа к интернету</h3>
         <p>
           и необходимо срочно узнать местоположение любимца, можно отправить SMS на номер SIM-карты в маячке и получить
@@ -272,11 +264,11 @@
 </section>
 <section class="about_collar">
   <div class="container">
-    <h2 data-aos="fade-left">
+    <h2>
       GPS-ТРЕКЕР НА ВСЕ СЛУЧАИ ЖИЗНИ ПИТОМЦА
     </h2>
     <div class="row">
-      <div class="about_collar-item col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="about_collar-item col-md-6 col-xl-3">
         <h4>
           Защищен от физических повреждений
         </h4>
@@ -285,7 +277,7 @@
           водные процедуры или “грязевые ванны”.
         </p>
       </div>
-      <div class="about_collar-item col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+      <div class="about_collar-item col-md-6 col-xl-3">
         <h4>
           Автоматически оповещает
         </h4>
@@ -293,7 +285,7 @@
           Присылает уведовление на телефон о скором окончание заряда батареи, чтобы вы не забыли зарядить
           устройство </p>
       </div>
-      <div class="about_collar-item col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="600">
+      <div class="about_collar-item col-md-6 col-xl-3">
         <h4>
           Передает все данные
         </h4>
@@ -301,7 +293,7 @@
           Присылает в приложение на вашем телефоне информацию о местоположении животного, его дистанции, скорости
           движения и т.д. </p>
       </div>
-      <div class="about_collar-item col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="900">
+      <div class="about_collar-item col-md-6 col-xl-3">
         <h4>
           Работает от аккумулятора
         </h4>
@@ -314,14 +306,14 @@
 <section class="buy_agitation">
   <div class="container">
     <div class="row">
-      <div class="buy_agitation-image buy_agitation-image-even col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="buy_agitation-image buy_agitation-image-even col-lg-6">
         <img src="images/happy.svg" alt="">
       </div>
       <div class="buy_agitation-text buy_agitation-text-even col-lg-5">
-        <h2 data-aos="fade-up" data-aos-delay="300">
+        <h2>
           <span>ЗАКАЗЫВАЙТЕ GPS-ОШЕЙНИК ДЛЯ ДОМАШНИХ ЖИВОТНЫХ,</span> И ВАШ ПИТОМЕЦ ВСЕГДА БУДЕТ РЯДОМ
         </h2>
-        <p class="big-p" data-aos="fade-up" data-aos-delay="600">
+        <p class="big-p">
           Небольшой трекер упростит контроль за домашним питомцем. Больне не нужно следить в оба глаза на прогулке,
           бегать за ним или переживать, что любимец так и не найдется. Теперь ситуация всегда будет у вас под контролем.
         </p>
@@ -329,14 +321,14 @@
     </div>
     <div class="row">
       <div class="buy_agitation-text buy_agitation-text-odd col-lg-7">
-        <h2 data-aos="fade-up" data-aos-delay="300">
+        <h2>
           СПЕЦИАЛЬНО ДЛЯ ВАС МЫ ПОДГОТОВИЛИ ПОДАРОК - <span>ПЕРЧАТКУ ДЛЯ УДАЛЕНИЯ ВОЛОС С ДОМАШНИХ ЖИВОТНЫХ</span>
         </h2>
-        <p class="big-p" data-aos="fade-up" data-aos-delay="600">
+        <p class="big-p">
           Ну кто же не любит ласку, особенно четвероногие друзья. С такой перчаткой вы легкими движениями доставите
           своему питомцу море удовольствия и заодно избавитесь от проблем с шерстью по всему дому. </p>
       </div>
-      <div class="buy_agitation-image buy_agitation-image-odd col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+      <div class="buy_agitation-image buy_agitation-image-odd col-lg-5">
         <img src="images/gloves.svg" alt="">
       </div>
     </div>
@@ -344,7 +336,7 @@
 </section>
 <section class="dont_wait">
   <div class="container">
-    <div class="dont_wait-header" data-aos="fade-up" data-aos-delay="100">
+    <div class="dont_wait-header">
       <h2 class="orange">
         НЕ ЖДИТЕ, ПОКА ЧЕТВЕРОНОГИЙ ДРУГ ПОТЕРЯЕТСЯ!
       </h2>
@@ -353,7 +345,7 @@
         <b>свободу и безопасность</b> своему любимцу, а свои детям сохраните безоблачное детсво.
       </p>
     </div>
-    <div class="dont_wait-block about-delivery" data-aos="fade-up" data-aos-delay="300">
+    <div class="dont_wait-block about-delivery">
       <h2>
         ДОСТАВКА В ЛЮБУЮ ТОЧКУ РОССИИ
       </h2>
@@ -363,7 +355,7 @@
         пунктах самовывоза. Оплата возможна наличными курьеру или картой после проверки заказа.
       </p>
     </div>
-    <div class="dont_wait-deliver-block" data-aos="fade-up" data-aos-delay="500">
+    <div class="dont_wait-deliver-block">
       <div class="table-button-block">
         <div class="table-button btn">
           <span>Санкт-Петербург и область</span>
@@ -397,7 +389,7 @@
         </div>
       </div>
     </div>
-    <p class="big-p" data-aos="fade-up" data-aos-delay="600">
+    <p class="big-p">
       Стоимость и сроки доставки GPS-ошейников в отдаленные города страны рассчитываются индивидуально. Созвонитесь с
       нашим менеджером для уточнения всех деталей пересылки.
     </p>
@@ -409,13 +401,13 @@
       <div class="form-section-img">
         <img src="images/form-dog.png" alt="">
       </div>
-      <form class="form-section-form form consultation-form" action="">
-        <h2 data-aos="fade-right" data-aos-delay="100">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ПОВОДУ ПРИМЕНЕНИЯ GPS-ОШЕЙНИКА</h2>
-        <p data-aos="fade-right" data-aos-delay="300">Оставьте свои контакты, и мы свяжемся с вами в течение часа.</p>
+      <form id="formTest" class="form-section-form form consultation-form" action="#">
+        <h2>ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ПОВОДУ ПРИМЕНЕНИЯ GPS-ОШЕЙНИКА</h2>
+        <p>Оставьте свои контакты, и мы свяжемся с вами в течение часа.</p>
         <div class="input-wrap">
-          <input name="name" class="name-input" type="text" placeholder="Ваше имя" data-aos="fade-right" data-aos-delay="900">
-          <input name="phone" class="phone-input" type="tel" placeholder="Ваш телефон" data-aos="fade-right" data-aos-delay="700">
-          <button type="submit" class="btn" data-aos="fade-right" data-aos-delay="500">
+          <input name="name" class="name-input _reqq" type="text" placeholder="Ваше имя">
+          <input name="phone" class="phone-input _email _reqq" type="tel" placeholder="Ваш телефон">
+          <button type="submit" class="btn form__btn">
             <span>Отправить</span>
           </button>
         </div>
@@ -426,10 +418,10 @@
 <footer>
   <div class="container">
     <header class="header">
-      <div class="logo" data-aos="zoom-in" data-aos-delay="100">
+      <div class="logo">
         <img src="images/petscope-logo.svg" alt="">
       </div>
-      <menu class="header-list menu" data-aos="fade-up" data-aos-delay="300">
+      <menu class="header-list menu">
         <li class="header-list-item menu-item active"><a href="#">Главная</a></li>
         <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
         <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
@@ -442,7 +434,7 @@
           <div class="hamburger-inner"></div>
         </div>
       </div>
-      <div class="footer_phone-button_wrap" data-aos="fade-up" data-aos-delay="600">
+      <div class="footer_phone-button_wrap">
         <div class="header-btn-wrap">
           <button class="btn btn-header">Обратный звонок</button>
         </div>
@@ -454,12 +446,9 @@
   </div>
 </footer>
 
-<!-- build:js scripts/vendor.js -->
+<script src="scripts/modernizr.js"></script>
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
-<!-- endbuild -->
-<!-- build:js scripts/main.js -->
+<script src="/node_modules/aos/dist/aos.js"></script>
 <script src="scripts/main.js"></script>
-<!-- endbuild -->
 </body>
 </html>
