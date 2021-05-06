@@ -1,6 +1,6 @@
 @import "variables";
 
-@import "modules/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import  "modules/hamburgers";
 
 @import "modules/sprite";
@@ -18,8 +18,3 @@
 @import "sections/about-collar";
 @import "sections/dont_wait";
 @import "sections/footer";
-
-
-._error {
-  border: 1px solid red;
-}

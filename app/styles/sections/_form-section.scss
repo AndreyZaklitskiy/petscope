@@ -34,9 +34,9 @@
   .input-wrap {
     padding-bottom: 100px;
     margin-right: auto;
-    input {
-      background: #EDE7DE;
-    }
+  }
+  input[type='text'],input[type='tel'] {
+    background: #EDE7DE;
   }
   button {
     background-color: $accent-green;

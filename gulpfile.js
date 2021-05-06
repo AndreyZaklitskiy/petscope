@@ -26,12 +26,12 @@ const isDev = !isProd && !isTest;
   // Spritesmith.run({
   //   src: sprites,
   //   padding : 1
-  // }, 
+  // },
   //   function handleResult (err, result) {
   //     result.image; // Buffer representation of image
   //     result.coordinates; // Object mapping filename to {x, y, width, height} of image
   //     result.properties; // Object with metadata about spritesheet {width, height}
-  
+
   //     // Output the image
   //   fs.writeFileSync(__dirname + '/alt-diagonal.png', result.image);
   // });
