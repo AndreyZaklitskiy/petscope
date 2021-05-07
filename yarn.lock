@@ -5496,6 +5496,13 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.0.0.tgz#87fccfaeffc0b68cd19d55f6722943f929ea35ea"
   integrity sha1-h/zPrv/AtozRnVX2cilD+SnqNeo=
 
+just-validate@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/just-validate/-/just-validate-1.5.0.tgz#aab158fec47120041002f6849a3fcad7342fd6ed"
+  integrity sha512-avrGuoVZplYaXoSDXOg5RWvyKTERDCvqdi0aM55BdrmpUDW19k4vpFApdfy40rrjL3fytoGUMKfkEZKpBT3vHQ==
+  dependencies:
+    promise-polyfill "^6.0.2"
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -7209,6 +7216,11 @@ progress@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
+
+promise-polyfill@^6.0.2:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
+  integrity sha1-36lpQ+qcEh/KTem1hoyznTRy4Fc=
 
 proto-list@~1.2.1:
   version "1.2.4"
