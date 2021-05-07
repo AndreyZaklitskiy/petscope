@@ -33,77 +33,86 @@ let petscope = {
 }.init();
 
 
-let mail = {
+////////////////////////
 
-}
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('.form');
-  // const getConsultationFrom1 = document.getElementById('consultationForm1');
-  // const getConsultationFrom2 = document.getElementById('consultationForm2');
-  form.addEventListener('submit', formSend);
-  // getConsultationFrom1.addEventListener('submit', formSend);
-  // getConsultationFrom2.addEventListener('submit', formSend);
+
+
+  function formValidationFoo(formName) {
+
+    let form = document.querySelector(formName);
+    form.addEventListener('submit', formSend);
 
 //async
-  function formSend(e) {
-    e.preventDefault();
-    let error = formValidate(form);
-    console.log(error);
+    function formSend(e) {
+      e.preventDefault();
+      let error = formValidate(form);
+      console.log(error);
 
-    // let formData = new FormData(form);
-    //  if (error === 0) {
-    //    form.classList.add('_sending');
-    //    let response = await fetch('mail.php', {
-    //      method: 'POST',
-    //      body: formData
-    //    });
-    //    if (response.ok) {
-    //      let result = await response.json();
-    //      alert(result.message);
-    //      formPreview.innerHTML = '';
-    //      form.reset();
-    //    } else {
-    //      alert ('Ошибка');
-    //    }
-    //  } else {
-    //    alert('Заполните обязательные поля');
-    //    console.log(error);
-    //  }
-  }
+      let formData = new FormData(form);
+      //  if (error === 0) {
+      //    form.classList.add('_sending');
+      //    let response = await fetch('mail.php', {
+      //      method: 'POST',
+      //      body: formData
+      //    });
+      //    if (response.ok) {
+      //      let result = await response.json();
+      //      alert(result.message);
+      //      formPreview.innerHTML = '';
+      //      form.reset();
+      //    } else {
+      //      alert ('Ошибка');
+      //    }
+      //  } else {
+      //    alert('Заполните обязательные поля');
+      //    console.log(error);
+      //  }
+    }
 
-  function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('._reqq');
-    for(let i = 0; i < formReq.length; i++) {
-      const input = formReq[i];
-      formRemoveError(input);
-      if(input.classList.contains('_email')) {
-        if(emailTest(input)) {
+    function formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelectorAll(formName+'>input');
+      console.log(formName + '>input');
+      console.log(formReq);
+      for(let i = 0; i < formReq.length; i++) {
+        const input = formReq[i];
+        formRemoveError(input);
+        if(input.classList.contains('_email')) {
+          if(emailTest(input)) {
+            formAddError(input);
+            error++;
+            console.log('email error');
+          }
+        }if(input.value === '') {
           formAddError(input);
           error++;
-          console.log('email error');
         }
-      }if(input.value === '') {
-        formAddError(input);
-        error++;
       }
+      return error;
     }
-    return error;
+    function formAddError(input) {
+      input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+      input.classList.remove('_error');
+    }
+    // Test function for Email
+    function emailTest(input) {
+      //return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(input.value);
+      return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    }
   }
-  function formAddError(input) {
-    // input.parentElement.classList.add('_error');
-    input.classList.add('_error');
-  }
-  function formRemoveError(input) {
-    // input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
-  }
-  // Test function for Email
-  function emailTest(input) {
-    //return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(input.value);
-    return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-  }
+
+
+  formValidationFoo('.head-form');
+  formValidationFoo('.consultation-form-1');
+  formValidationFoo('.consultation-form-2');
+
+
 
 //-----------input mask----//
 let tel = document.querySelectorAll('.phone-input');
@@ -204,3 +213,84 @@ $(function () {
 //   //   console.log(error);
 //   // }
 // }
+
+
+
+
+/*  class mailValidation {
+    constructor(className) {
+      this.form = document.querySelector(className);
+      this.className = className;
+    }
+
+    addEvListener() {
+      this.form.addEventListener('submit', this.formSend);
+
+    }
+    //async
+    formSend(e) {
+      console.log(this.form);
+      e.preventDefault();
+      let error = this.formValidate(this.form);
+      console.log(error);
+
+      let formData = new FormData(this.form);
+      /!*
+      if (error === 0) {
+        this.form.classList.add('_sending');
+        let response = await fetch('mail.php', {
+          method: 'POST',
+          body: formData
+        });
+        if (response.ok) {
+          let result = await response.json();
+          alert(result.message);
+          formPreview.innerHTML = '';
+          this.form.reset();
+        } else {
+          alert('Ошибка');
+        }
+      } else {
+        alert('Заполните обязательные поля');
+        console.log(error);
+      }
+      *!/
+
+    }
+
+    formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelectorAll(this.className + '>input');
+      for (let i = 0; i < formReq.length; i++) {
+        const input = formReq[i];
+        this.formRemoveError(input);
+        if (input.classList.contains('_email')) {
+          if (this.emailTest(input)) {
+            this.formAddError(input);
+            error++;
+            console.log('email error');
+          }
+        }
+        if (input.value === '') {
+          this.formAddError(input);
+          error++;
+        }
+      }
+      return error;
+    }
+
+    formAddError(input) {
+      input.classList.add('_error');
+    }
+
+    formRemoveError(input) {
+      input.classList.remove('_error');
+    }
+
+    // Test function for Email
+    emailTest(input) {
+      return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    }
+  }
+
+  let form1Validation = new mailValidation('.head-form');*/
