@@ -1,7 +1,9 @@
-@import "variables";
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 @import  "modules/hamburgers";
+
+@import "variables";
 
 @import "modules/sprite";
 @import "functions";
@@ -19,6 +21,4 @@
 @import "sections/dont_wait";
 @import "sections/footer";
 
-.js-validate-error-label {
-  display: none;
-}
+

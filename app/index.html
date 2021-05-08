@@ -12,21 +12,21 @@
 </head>
 <body>
 <section class="header-section">
-  <div class="container">
-    <header class="header">
-      <div class="logo">
+  <header class="header">
+    <div class="container container-big">
+      <div class=" header-logo logo">
         <img src="images/petscope-logo.svg" alt="">
       </div>
-      <menu class="header-list menu">
-        <li class="header-list-item menu-item active"><a href="#">Главная</a></li>
-        <li class="header-list-item menu-item"><a href="#">Как работает</a></li>
-        <li class="header-list-item menu-item"><a href="#">Преимущества</a></li>
-        <li class="header-list-item menu-item"><a href="#">Доставка</a></li>
-        <li class="header-list-item menu-item"><a href="#">Контакты</a></li>
-        <li class="phone">
-          <a href="tel: +7 455 345 23 00">7 455 345 23 00</a>
-        </li>
-      </menu>
+      <nav class="header-menu menu">
+        <ul class="header-menu--list">
+          <li class="header-menu--item  active"><a href="#">Главная</a></li>
+          <li class="header-menu--item menu-item"><a href="#">Как работает</a></li>
+          <li class="header-menu--item menu-item"><a href="#">Преимущества</a></li>
+          <li class="header-menu--item menu-item"><a href="#">Доставка</a></li>
+          <li class="header-menu--item menu-item"><a href="#">Контакты</a></li>
+          <li class="header-menu--item phone"><a href="tel: +7 455 345 23 00">7 455 345 23 00</a></li>
+        </ul>
+      </nav>
       <div class="phone">
         <a href="tel: +7 455 345 23 00">7 455 345 23 00</a>
       </div>
@@ -39,41 +39,50 @@
       <div class="header-btn-wrap">
         <button class="btn btn-header">Обратный звонок</button>
       </div>
-    </header>
-    <div class="header-block">
-      <div class="header-block-text">
-        <h1>GPS-ОШЕЙНИК</h1>
-        <span>PETSCOPE</span>
-        <h2> ДЛЯ ДОМАШНИХ ПИТОМЦЕВ</h2>
-        <p class="big-p">Контроль и безопасность вашего питомца во время прогулок</p>
-      </div>
-      <div class="header-block-table header-table">
-        <div class="header-table-row">
-          <p>Спокойствие за вашего друга</p>
+    </div>
+  </header>
+
+  <div class="header-block">
+    <div class="container">
+      <div class="row">
+        <div class="header-block-text">
+          <h1>GPS-ОШЕЙНИК</h1>
+          <span>PETSCOPE</span>
+          <h2> ДЛЯ ДОМАШНИХ ПИТОМЦЕВ</h2>
+          <p class="big-p">Контроль и безопасность вашего питомца во время прогулок</p>
         </div>
-        <div class="header-table-row">
-          <p>Онлайн наблюдение по телефону или с компьютера</p>
-        </div>
-        <div class="header-table-row">
-          <p>Быстрый и результативный поиск потеряшки</p>
-        </div>
-        <div class="header-table-row">
-          <p>Установление безопасных границ для питомца</p>
-        </div>
-        <div class="header-table-row">
-          <p>Гарантия на все ошейники на 1 год</p>
+        <div class="header-block-table">
+          <div class="header-table">
+            <div class="header-table-row">
+              <p>Спокойствие за вашего друга</p>
+            </div>
+            <div class="header-table-row">
+              <p>Онлайн наблюдение по телефону или с компьютера</p>
+            </div>
+            <div class="header-table-row">
+              <p>Быстрый и результативный поиск потеряшки</p>
+            </div>
+            <div class="header-table-row">
+              <p>Установление безопасных границ для питомца</p>
+            </div>
+            <div class="header-table-row">
+              <p>Гарантия на все ошейники на 1 год</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <form id="buyForm" class="head-form form buy-form">
-      <h3>Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
-      <input data-validate-field="name" class="name name-input _req _reqq" type="text" placeholder="Ваше имя">
-      <input data-validate-field="tel" class="phone-number phone-input _req _reqq" type="text" placeholder="Ваш телефон">
-      <button type="submit" class="btn btn-buy">
-        <span>Заказать</span>
-      </button>
-    </form>
+  </div>
+  <div class="container">
+  <form id="buyForm" class="head-form form buy-form">
+    <h3>Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
+    <input data-validate-field="name" class="name name-input _req _reqq" type="text" placeholder="Ваше имя">
+    <input data-validate-field="tel" class="phone-number phone-input _req _reqq" type="text"
+           placeholder="Ваш телефон">
+    <button type="submit" class="btn btn-buy">
+      <span>Заказать</span>
+    </button>
+  </form>
   </div>
 </section>
 <section class="alone">
@@ -87,7 +96,7 @@
         Ведь с потерей любимца семьи невозможно смириться!
       </h3>
     </div>
-    <div class="alone-list-block" >
+    <div class="alone-list-block">
       <div class="alone-header">
         <h2>
           ЧТО ОЖИДАЕТ ВАШЕГО ПИТОМЦА ПОТЕРЯВШЕГОСЯ БЕЗ <span>GPS-ОШЕЙНИКА</span>
@@ -125,7 +134,7 @@
   <div class="about-map-block">
     <div class="container">
       <h3 class="message message-1">
-        <span >ИЗБЕЖАТЬ ТАКОЙ УЧАСТИ МОЖНО</span>
+        <span>ИЗБЕЖАТЬ ТАКОЙ УЧАСТИ МОЖНО</span>
         С ПОМОЩЬЮ ОШЕЙНИКА С GPS-ТРЕКЕРОМ
       </h3>
       <h3 class="message message-2">
@@ -154,7 +163,7 @@
               Сохраняет историю перемещений
             </h4>
             <p>
-              Позволяет определять маршрут питомца и фиксиурет с точностью в 5-10 метров            </p>
+              Позволяет определять маршрут питомца и фиксиурет с точностью в 5-10 метров </p>
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
@@ -173,7 +182,8 @@
               Автоматически оповещает владельца
             </h4>
             <p>
-              Устанавливет так называемый “геозабор”, при котором контролируется территория для прогулок на даче или за городом
+              Устанавливет так называемый “геозабор”, при котором контролируется территория для прогулок на даче или за
+              городом
             </p>
           </div>
         </div>
@@ -401,12 +411,14 @@
       <div class="form-section-img">
         <img src="images/form-dog.png" alt="">
       </div>
-      <form id="consultationForm2" class="form-section-form form consultation-form consultation-form-2" action="#" method="GET">
+      <form id="consultationForm2" class="form-section-form form consultation-form consultation-form-2" action="#"
+            method="GET">
         <h2>ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ПОВОДУ ПРИМЕНЕНИЯ GPS-ОШЕЙНИКА</h2>
         <p>Оставьте свои контакты, и мы свяжемся с вами в течение часа.</p>
         <div class="input-wrap">
           <input data-validate-field="name" name="name" class="name-input _reqqqq" type="text" placeholder="Ваше имя">
-          <input data-validate-field="tel" name="phone" class="phone-input _email _reqqqq" type="tel" placeholder="Ваш телефон">
+          <input data-validate-field="tel" name="phone" class="phone-input _email _reqqqq" type="tel"
+                 placeholder="Ваш телефон">
           <button type="submit" class="btn form__btn">
             <span>Отправить</span>
           </button>

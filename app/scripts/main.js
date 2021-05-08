@@ -14,7 +14,7 @@ let petscope = {
   hamburgerHandler() {
     $('.hamburger').on('click', () => {
       $('.hamburger').toggleClass('is-active');
-      $('.header-list').toggleClass('is-active');
+      $('.header-menu').toggleClass('is-active');
     });
   },
 

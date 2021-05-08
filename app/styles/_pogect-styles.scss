@@ -51,6 +51,15 @@ h4 {
   color: #313131;
 }
 
+.js-validate-error-label {
+  display: none;
+}
+
+.container.container-big {
+  max-width: 1600px;
+}
+
+
 @keyframes jump {
   0% {
     transform: translateY(0);
