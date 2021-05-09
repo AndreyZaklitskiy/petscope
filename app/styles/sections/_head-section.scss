@@ -10,124 +10,9 @@
   margin-bottom: auto;
   background-size: contain;
 }
-.head-section {
-  min-height: 100vh;
-}
-.header {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 25px 15px 50px;
-    max-width: 1600px;
-  }
-}
-.logo {
-  width: 250px;
-  height: 57px;
-  margin-right: 20px;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-/*--------header menu-------------*/
-.header-menu {
-  margin: 0 auto;
-  z-index: 1;
-}
-.header-menu--list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .phone {
-    display: none;
-    a {
-      &:before {
-        @include before-icon();
-        width: 24px;
-        height: 24px;
-        left: calc(-24px - 11px);
-        background-image: url(../../images/phone-white-icon.png);
-      }
-    }
-  }
-}
-.header-menu--item {
-  position: relative;
-  margin-right: 18px;
-  font-family: $bold;
-  font-size: 16px;
-  a {
-    text-decoration: none;
-    color: $text-dark;
-    position: relative;
-    padding: 15px;
-    cursor: pointer;
-  }
-}
-.header-menu--item.active {
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -14px;
-    left: 15px;
-    background-color: $accent-green;
-    height: 6px;
-    width: 42px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-  }
-}
-.phone {
-  position: relative;
-  margin: 0 20px;
-  a {
-    color: $green;
-    position: relative;
-    font-family: $bold;
-    font-size: 16px;
-    &:before {
-      @include before-icon();
-      width: 24px;
-      height: 24px;
-      left: calc(-24px - 11px);
-      background-image: url(../../images/phone-icon.png);
-    }
-  }
-}
-.btn {
-  font-family: $bold;
-  text-align: center;
-  border-radius: 50px;
-  &-header {
-    color: $green;
-    padding: 15px 38px;
-    border: 3px solid #5EAF28;
-    background-color: transparent;
-  }
-}
-/*--------HAMBURGER-------------*/
-.hamburger {
-  display: none;
-  z-index: 11;
-}
-.hamburger-box {
-  width: 24px;
-}
-.hamburger-inner,
-.hamburger-inner:before,
-.hamburger-inner:after {
-  width: 24px;
-  height: 4px;
-  background-color: $text-dark;
-}
 /*--------TOP SECTION-------------*/
 .head-section {
+  min-height: 100vh;
   background: rgba(255, 243, 220, 0.8);
   position: relative;
   padding-bottom: 100px;
@@ -164,23 +49,22 @@
   };
   position: relative;
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   margin: auto 0;
-  &-text {
+  &--text {
     min-width: 654px;
     display: flex;
    flex-direction: column;
    justify-content: center;
   }
-  h1 {
+  &--title {
     position: relative;
     z-index: 2;
     font-family: $bold;
     font-size: 78px;
     color: $accent-green;
   }
-  span {
+  &--title-2 {
     position: relative;
     z-index: 2;
     font-family: $bold;
@@ -195,42 +79,26 @@
     margin-bottom: 16px;
     margin-right: auto;
   }
-  h2 {
+  &--subtitle {
     position: relative;
     z-index: 2;
     text-align: left;
     margin-bottom: 56px;
   }
-  p {
+  &--desc {
     position: relative;
     z-index: 2;
     max-width: 523px;
   }
-  // &:before {
-  //   content: '';
-  //   display: block;
-  //   width: 540px;
-  //   height: 512px;
-  //   background: url("../../images/puppy.png") no-repeat;
-  //   background-size: contain;
-  //   position: absolute;
-  //   bottom: 50%;
-  //   transform: translateY(50%);
-  //   right: -240px;
-  //   margin-top: auto;
-  //   z-index: 0;
-  // }
-  &-img {
-    // height: 512px;
+  &--img {
     width: 540px;
-    // margin-left: auto;
     img {
       width: 100%;
     }
   }
 }
 //---------right column-----------
-.head-table-wrap {
+.head-table--wrap {
   @include make-col-ready();
   @include media-breakpoint-up(xl) {
     @include make-col(3);
@@ -248,7 +116,7 @@
   width: 347px;
   z-index: 5;
   margin-left: auto;
-  &-row {
+  &--row {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -263,31 +131,26 @@
       height: 50px;
       left: 15px;
     }
-
     &:nth-child(1) {
       &:before {
         background: url(../../images/fingerUp.png) no-repeat center center;
       }
     }
-
     &:nth-child(2) {
       &:before {
         background: url(../../images/smartphone-icon.png) no-repeat center center;
       }
     }
-
     &:nth-child(3) {
       &:before {
         background: url(../../images/loop-icon.png) no-repeat center center;
       }
     }
-
     &:nth-child(4) {
       &:before {
         background: url(../../images/sled-icon.png) no-repeat center center;
       }
     }
-
     &:nth-child(5) {
       &:before {
         background: url(../../images/garanty-icon.png) no-repeat center center;
@@ -297,7 +160,7 @@
   &-icon {
     position: relative;
   }
-  p {
+  &--txt {
     padding: 10px 32px 10px 98px;
     display: block;
     font-family: $regular;
@@ -396,30 +259,13 @@
 
 
 
-@media screen and (max-width: 1600px) {
-  /*-------header--------*/
-  .logo {
-    margin-right: auto;
-  }
-  .header-menu {
-    width: 100%;
-    order: 1;
-    margin-top: 22px;
-  }
-}
+
 
 @media screen and (max-width: 1465px) {
-  /*-------header left column--------*/
-  .head-content {
-    margin-bottom: 70px;
-    &:before {
-      right: -100px;
-    }
-  }
   /*-------header right column--------*/
   .head-table {
     width: 100%;
-    &-row {
+    &--row {
       width: calc(50% - 10px);
     }
   }
@@ -455,20 +301,20 @@
 @media screen and (max-width: 1200px) {
   /*-------header left column--------*/
   .head-content {
-    &-text {
+    &--text {
       min-width: auto;
       margin-right: auto;
     }
-    h1 {
+    &--title {
       font-size: 70px;
     }
-    span {
+    &--title-2 {
       font-size: 44px;
     }
-    h2 {
+    &--subtitle {
       margin-bottom: 40px;
     }
-    &-img {
+    &--img {
       width: 500px;
       position: absolute;
       bottom: 32%;
@@ -498,82 +344,19 @@
   .head-section {
     padding-bottom: 50px;
   }
-  /*-------header--------*/
-  .header {
-    .hamburger {
-      display: block;
-      z-index: 100;
-      &.is-active {
-        position: fixed;
-        right: 30px;
-        top: 30px;
-      }
-    }
-    .phone {
-      display: none;
-    }
-  }
-  .header-menu--item.active {
-    &:after {
-      display: none;
-    }
-  }
-  .header-menu {
-    margin-top: 0;
-    z-index: 10;
-    position: fixed;
-    right: -100vw;
-    top: -100vh;
-    background-color: $green;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    &.is-active {
-      top: 0;
-      right: 0;
-      z-index: 99;
-    }
-    &--list {
-      width: 100vw;
-      height: 100vh;
-      flex-direction: column;
-    }
-    li {
-      margin: 15px auto;
-    }
-    li > a {
-      color: $white;
-    }
-    .phone {
-      position: absolute;
-      bottom: 70px;
-      margin: 0 auto;
-      display: block;
-      color: $white;
-    }
-  }
-  .header-btn-wrap {
-    width: 100%;
-    padding-top: 22px;
-  }
-  .header-menu--item {
-    margin-right: 10px;
-  }
   /*-------top left block--------*/
   .head-content {
     margin-bottom: 50px;
-    p {
+    &--desc {
       max-width: 350px;
     }
-    &-img {
+    &--img {
       width: 360px;
     }
   }
   /*-------header form--------*/
   .head-table {
-    &-row {
+    &--row {
       width: 100%;
     }
   }
@@ -582,20 +365,20 @@
 @media screen and (max-width: 768px) {
   /*-------top left block--------*/
   .head-content {
-    h1 {
+    &--title {
       font-size: 36px;
     }
-    span {
+    &--title-2 {
       font-size: 30px;
       padding: 4px 18px;
     }
-    h2 {
+    &--subtitle {
       max-width: 200px;
     }
-    p {
+    &--desc {
       max-width: 200px;
     }
-    &-img {
+    &--img {
       width: 360px;
     }
   }
@@ -635,45 +418,31 @@
     }
   }
 }
-
 @media screen and (max-width: 480px) {
-  /*-------header--------*/
-  header {
-    padding: 0 15px 0;
-  }
-  .logo {
-    width: 158px;
-    height: 36px;
-  }
-  .header-btn-wrap {
-    padding-top: 10px;
-  }
   /*-------top left block--------*/
   .head-content {
-    h1 {
+    &--title {
       font-size: 34px;
     }
-    h2 {
+    &--subtitle {
       max-width: 162px;
     }
-    p {
+    &--desc {
       max-width: 162px;
     }
-    &-img {
+    &--img {
       width: 252px;
-      // right: -100px;
       z-index: 2;
     }
   }
 }
-
 @media screen and (max-width: 320px) {
   /*-------top left block--------*/
   .head-content {
-    h1 {
+    &--title {
       font-size: 30px;
     }
-    span {
+    &--title-2 {
       font-size: 22px;
     }
   }

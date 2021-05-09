@@ -1,0 +1,203 @@
+.header {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 25px 15px 50px;
+      max-width: 1600px;
+    }
+  }
+  .logo {
+    width: 250px;
+    height: 57px;
+    margin-right: 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  /*--------header menu-------------*/
+.header-menu {
+    margin: 0 auto;
+    z-index: 1;
+  }
+  .header-menu--list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .phone {
+      display: none;
+      a {
+        &:before {
+          @include before-icon();
+          width: 24px;
+          height: 24px;
+          left: calc(-24px - 11px);
+          background-image: url(../../images/phone-white-icon.png);
+        }
+      }
+    }
+  }
+  .header-menu--item {
+    position: relative;
+    margin-right: 18px;
+    font-family: $bold;
+    font-size: 16px;
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      position: relative;
+      padding: 15px;
+      cursor: pointer;
+    }
+  }
+  .header-menu--item.active {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -14px;
+      left: 15px;
+      background-color: $accent-green;
+      height: 6px;
+      width: 42px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+    }
+  }
+  .phone {
+    position: relative;
+    margin: 0 20px;
+    a {
+      color: $green;
+      position: relative;
+      font-family: $bold;
+      font-size: 16px;
+      &:before {
+        @include before-icon();
+        width: 24px;
+        height: 24px;
+        left: calc(-24px - 11px);
+        background-image: url(../../images/phone-icon.png);
+      }
+    }
+  }
+  .btn {
+    font-family: $bold;
+    text-align: center;
+    border-radius: 50px;
+    &-header {
+      color: $green;
+      padding: 15px 38px;
+      border: 3px solid #5EAF28;
+      background-color: transparent;
+    }
+  }
+  /*--------HAMBURGER-------------*/
+.hamburger {
+    display: none;
+    z-index: 11;
+  }
+  .hamburger-box {
+    width: 24px;
+  }
+  .hamburger-inner,
+  .hamburger-inner:before,
+  .hamburger-inner:after {
+    width: 24px;
+    height: 4px;
+    background-color: $text-dark;
+  }
+  @media screen and (max-width: 1600px) {
+    /*-------header--------*/
+    .logo {
+      margin-right: auto;
+    }
+    .header-menu {
+      width: 100%;
+      order: 1;
+      margin-top: 22px;
+    }
+  }
+  @media screen and (max-width: 1465px) {
+    /*-------header left column--------*/
+    .head-content {
+      margin-bottom: 70px;
+    }
+}
+@media screen and (max-width: 992px) {
+    /*-------header--------*/
+    .header {
+      .hamburger {
+        display: block;
+        z-index: 100;
+        &.is-active {
+          position: fixed;
+          right: 30px;
+          top: 30px;
+        }
+      }
+      .phone {
+        display: none;
+      }
+    }
+    .header-menu--item.active {
+      &:after {
+        display: none;
+      }
+    }
+    .header-menu {
+      margin-top: 0;
+      z-index: 10;
+      position: fixed;
+      left: -100vw;
+      background-color: $green;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      &.is-active {
+        right: 0;
+        z-index: 99;
+      }
+      .header-menu--list {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .header-menu--item {
+        margin: 15px auto;
+        & > a {
+            color: $white;
+        }
+      }
+      .phone {
+        position: absolute;
+        bottom: 70px;
+        margin: 0 auto;
+        display: block;
+        color: $white;
+      }
+    }
+    .header-btn-wrap {
+      width: 100%;
+      padding-top: 22px;
+    }
+}
+@media screen and (max-width: 480px) {
+    /*-------header--------*/
+    header {
+      padding: 0 15px 0;
+    }
+    .logo {
+      width: 158px;
+      height: 36px;
+    }
+    .header-btn-wrap {
+      padding-top: 10px;
+    }
+}
