@@ -213,7 +213,7 @@
       font-size: 22px;
     }
   }
-  button {
+  .btn {
     font-size: 24px;
     display: inline-flex;
     align-items: center;
@@ -259,8 +259,6 @@
 
 
 
-
-
 @media screen and (max-width: 1465px) {
   /*-------header right column--------*/
   .head-table {
@@ -282,7 +280,7 @@
         margin-right: 0;
       }
     }
-    button {
+    .btn {
       width: 100%;
       span {
         margin-left: auto;
@@ -406,7 +404,7 @@
         font-size: 20px;
       }
     }
-    button {
+    .btn {
       font-size: 20px;
       padding: 21px 45px;
     }
@@ -418,6 +416,7 @@
     }
   }
 }
+
 @media screen and (max-width: 480px) {
   /*-------top left block--------*/
   .head-content {
@@ -436,6 +435,7 @@
     }
   }
 }
+
 @media screen and (max-width: 320px) {
   /*-------top left block--------*/
   .head-content {
