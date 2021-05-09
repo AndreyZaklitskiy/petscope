@@ -22,3 +22,10 @@
 @import "sections/footer";
 
 
+
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1465px;
+    } 
+}

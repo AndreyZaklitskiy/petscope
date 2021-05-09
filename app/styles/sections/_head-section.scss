@@ -10,7 +10,7 @@
   margin-bottom: auto;
   background-size: contain;
 }
-.header-section {
+.head-section {
   min-height: 100vh;
 }
 .header {
@@ -83,7 +83,6 @@
     border-radius: 50px;
   }
 }
-
 .phone {
   position: relative;
   margin: 0 20px;
@@ -127,10 +126,8 @@
   height: 4px;
   background-color: $text-dark;
 }
-
-
 /*--------TOP SECTION-------------*/
-.header-section {
+.head-section {
   background: rgba(255, 243, 220, 0.8);
   position: relative;
   padding-bottom: 100px;
@@ -147,7 +144,7 @@
     height: 262px;
   }
 }
-.header-block {
+.head-block {
   margin: auto 0;
   .container {
     display: flex;
@@ -157,19 +154,25 @@
   }
 }
 //---------left column--------------
-.header-block-text {
+.head-content {
   @include make-col-ready();
   @include media-breakpoint-up(xl) {
-    @include make-col(8);
+    @include make-col(9);
   };
   @include media-breakpoint-down(xl) {
     @include make-col(12);
   };
   position: relative;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   margin: auto 0;
+  &-text {
+    min-width: 654px;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+  }
   h1 {
     position: relative;
     z-index: 2;
@@ -203,26 +206,34 @@
     z-index: 2;
     max-width: 523px;
   }
-  &:before {
-    content: '';
-    display: block;
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 540px;
+  //   height: 512px;
+  //   background: url("../../images/puppy.png") no-repeat;
+  //   background-size: contain;
+  //   position: absolute;
+  //   bottom: 50%;
+  //   transform: translateY(50%);
+  //   right: -240px;
+  //   margin-top: auto;
+  //   z-index: 0;
+  // }
+  &-img {
+    // height: 512px;
     width: 540px;
-    height: 512px;
-    background: url("../../images/puppy.png") no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    right: -240px;
-    margin-top: auto;
-    z-index: 0;
+    // margin-left: auto;
+    img {
+      width: 100%;
+    }
   }
 }
 //---------right column-----------
-.header-block-table {
+.head-table-wrap {
   @include make-col-ready();
   @include media-breakpoint-up(xl) {
-    @include make-col(4);
+    @include make-col(3);
   }
   @include media-breakpoint-down(xl) {
     @include make-col(12);
@@ -231,7 +242,7 @@
   margin-top: auto;
   margin-bottom: auto;
 }
-.header-table {
+.head-table {
   display: flex;
   flex-wrap: wrap;
   width: 347px;
@@ -399,14 +410,14 @@
 
 @media screen and (max-width: 1465px) {
   /*-------header left column--------*/
-  .header-block-text {
+  .head-content {
     margin-bottom: 70px;
     &:before {
       right: -100px;
     }
   }
   /*-------header right column--------*/
-  .header-table {
+  .head-table {
     width: 100%;
     &-row {
       width: calc(50% - 10px);
@@ -443,7 +454,11 @@
 
 @media screen and (max-width: 1200px) {
   /*-------header left column--------*/
-  .header-block-text {
+  .head-content {
+    &-text {
+      min-width: auto;
+      margin-right: auto;
+    }
     h1 {
       font-size: 70px;
     }
@@ -452,6 +467,16 @@
     }
     h2 {
       margin-bottom: 40px;
+    }
+    &-img {
+      width: 500px;
+      position: absolute;
+      bottom: 32%;
+      transform: translateY(50%);
+      right: -100px;
+      margin-top: auto;
+      margin-left: auto;
+
     }
   }
   /*-------header form--------*/
@@ -470,7 +495,7 @@
 
 @media screen and (max-width: 992px) {
   /*-------top section--------*/
-  .header-section {
+  .head-section {
     padding-bottom: 50px;
   }
   /*-------header--------*/
@@ -537,19 +562,17 @@
     margin-right: 10px;
   }
   /*-------top left block--------*/
-  .header-block-text {
+  .head-content {
     margin-bottom: 50px;
     p {
       max-width: 350px;
     }
-    &:before {
-      opacity: 1;
+    &-img {
       width: 360px;
-      height: 370px;
     }
   }
   /*-------header form--------*/
-  .header-table {
+  .head-table {
     &-row {
       width: 100%;
     }
@@ -558,7 +581,7 @@
 
 @media screen and (max-width: 768px) {
   /*-------top left block--------*/
-  .header-block-text {
+  .head-content {
     h1 {
       font-size: 36px;
     }
@@ -572,10 +595,8 @@
     p {
       max-width: 200px;
     }
-    &:before {
-      opacity: 1;
+    &-img {
       width: 360px;
-      height: 370px;
     }
   }
 }
@@ -628,7 +649,7 @@
     padding-top: 10px;
   }
   /*-------top left block--------*/
-  .header-block-text {
+  .head-content {
     h1 {
       font-size: 34px;
     }
@@ -638,17 +659,17 @@
     p {
       max-width: 162px;
     }
-    &:before {
+    &-img {
       width: 252px;
-      height: 266px;
-      z-index: 3;
+      // right: -100px;
+      z-index: 2;
     }
   }
 }
 
 @media screen and (max-width: 320px) {
   /*-------top left block--------*/
-  .header-block-text {
+  .head-content {
     h1 {
       font-size: 30px;
     }

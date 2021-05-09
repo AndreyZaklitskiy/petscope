@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
   AOS.init();
 /*----------------input mask--------------*/
 let tel = document.querySelectorAll('.phone-input');
-let im = new Inputmask("+7 (999) 999-99-99");
+let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(tel);
 
 /*-----------just validate-------------*/
@@ -55,7 +55,7 @@ new window.JustValidate(selector, {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log("Отправлено");
+          console.log('Отправлено');
         }
       }
     }
