@@ -256,7 +256,7 @@
     margin-right: 10px;
     margin-bottom: 10px;
     min-height: 96px;
-
+    border-radius: 10px;
     &:before {
       @include before-icon();
       width: 50px;
