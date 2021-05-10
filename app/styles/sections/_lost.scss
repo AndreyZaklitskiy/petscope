@@ -74,16 +74,28 @@
   }
 }
 .about-card {
+  position: relative;
   min-height: 290px;
-  padding: 40px 35px;
+  padding: 50px 40px 40px;
   background-color: #fff;
   margin-bottom: 30px;
   h4 {
     margin-bottom: 40px;
+    z-index: 1;
   }
    p {
     line-height: 28px;
+    z-index: 1;
    }
+   &--number {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: $bold;
+    font-size: 144px;
+    color: #F1F1F1;
+    z-index: 0;
+  }
 }
 
 @media screen and (max-width: 992px) {

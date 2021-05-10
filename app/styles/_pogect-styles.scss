@@ -18,6 +18,7 @@ body {
   color: $text-dark;
 }
 p {
+  position: relative;
   font-size: 18px;
   font-family: $regular;
   color: $text-dark;
@@ -39,11 +40,13 @@ h2 {
   }
 }
 h3 {
+  position: relative;
   font-size: 24px;
   font-family: $bold;
   line-height: 29px;
 }
 h4 {
+  position: relative;
   font-family: $medium;
   font-weight: bold;
   font-size: 20px;
