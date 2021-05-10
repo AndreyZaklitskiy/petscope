@@ -3,6 +3,43 @@
   .container {
     padding: 105px 15px 0;
   }
+  .form {
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    };
+    @include media-breakpoint-down(md) {
+      @include make-col(12);
+    };
+    padding: 0 33px 0;
+    h2 {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    p {
+      text-align: left;
+      margin-right: auto;
+      margin-bottom: 35px;
+    }
+    .input-wrap {
+      padding-bottom: 100px;
+      margin-right: auto;
+    }
+    input[type='text'],input[type='tel'] {
+      background: #EDE7DE;
+    }
+    button {
+      background-color: $accent-green;
+      color: $white;
+      span {
+        margin-left: auto;
+        margin-right: auto;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .form-section-img {
   @include make-col-ready();
@@ -19,59 +56,8 @@
     margin-top: auto;
   }
 }
-.form-section-form {
-  padding: 73px 33px 21px;
-  h2 {
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  p {
-    @extend .big-p;
-    text-align: left;
-    margin-right: auto;
-    margin-bottom: 35px;
-  }
-  .input-wrap {
-    padding-bottom: 100px;
-    margin-right: auto;
-  }
-  input[type='text'],input[type='tel'] {
-    background: #EDE7DE;
-  }
-  button {
-    background-color: $accent-green;
-    color: $white;
-    span {
-      margin-left: auto;
-      margin-right: auto;
-      &:before {
-        display: none;
-      }
-    }
-  }
-}
-//------------------------------
-#form {
-  ._error {
-    box-shadow: 0 0 10px red;
-  }
-}
-
-//------------------------------
-.consultation-form {
-  @include make-col-ready();
-  @include media-breakpoint-up(lg) {
-    @include make-col(8);
-  };
-  @include media-breakpoint-down(md) {
-    @include make-col(12);
-  };
-}
 .form-section-green {
   background: #75B14E;
-  .container {
-    padding: 0 15px 0;
-  }
   h2,p {
     color: #fff;
   }
@@ -79,64 +65,68 @@
     order: 2;
     transform: scale(-1, 1)
   }
-  button {
+  .form {
+      button {
     background: #FFE55D;
     color: #404040;
   }
+  }
+
   .input-wrap input {
     background-color: #fff;
   }
 }
 
 @media (max-width: 1500px) {
+
+
+  .form-section {
+    .form {   
+input[type = "text"] {
+      margin-right: 30px;
+    }
+    }
+  }
+}
+@media (max-width: 1465px) {
   .form-section-form {
-    input[type = "text"] {
-      margin-right: 10px;
-      width: 230px;
+    input[type = "tel"] {
+      margin-right: 0;
     }
   }
 }
 @media (max-width: 1200px) {
-  .form-section-img {
-    img {
-      margin-bottom: auto;
-    }
-  }
-  .form-section-form {
-     input[type = "text"] {
+  .form-section .container {
+    padding: 75px 15px 0;
+    .form {
+      input[type = "text"] {
        margin-right: 0;
        width: 100%;
      }
-   }
+    }
+}
 }
 @media (max-width: 992px) {
   .form-section {
     .container {
-      padding: 75px 0 0;
+      padding: 50px 15px 0;
     }
+    .form .input-wrap {
+    padding-bottom: 50px;
   }
-  .form-section-green {
-    .container {
-      padding: 0 0 0;
-    }
   }
   .form-section-img {
     order: 2;
     padding-right: 30px;
   }
-  .form-section-form .input-wrap {
-    padding-bottom: 50px;
-  }
 }
-@media (max-width: 568px) {
+@media (max-width: 575px) {
+
   .form-section {
-    .container {
-      padding: 0 0 0;
-    }
-  }
-  .form-section-form {
-    .input-wrap {
+    .form {
+          .input-wrap {
       padding-bottom: 20px;
+    }
     }
   }
   .form-section-green {

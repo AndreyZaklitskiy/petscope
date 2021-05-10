@@ -380,6 +380,11 @@
       width: 360px;
     }
   }
+  .form {
+    .form input[type='text'], .form input[type='tel'] {
+      height: 65px;
+    }
+  }
 }
 
 @media screen and (max-width: 568px) {
