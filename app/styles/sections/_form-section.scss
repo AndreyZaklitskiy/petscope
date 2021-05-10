@@ -24,6 +24,8 @@
     .input-wrap {
       padding-bottom: 100px;
       margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
     }
     input[type='text'],input[type='tel'] {
       background: #EDE7DE;
@@ -77,21 +79,15 @@
   }
 }
 
-@media (max-width: 1500px) {
-
-
+@media (max-width: 1465px) {
   .form-section {
     .form {   
 input[type = "text"] {
-      margin-right: 30px;
+      margin-right: auto;
     }
-    }
-  }
-}
-@media (max-width: 1465px) {
-  .form-section-form {
     input[type = "tel"] {
       margin-right: 0;
+    }
     }
   }
 }
