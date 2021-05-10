@@ -3,7 +3,7 @@
   background: #F6F6F6;
   .container {
     padding-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     display: flex;
     flex-direction: column;
   }
@@ -139,12 +139,13 @@
   .lost {
     .container {
       padding-bottom: 50px;
+      padding-top: 50px;
     }
   }
   .lost-square {
     border: 8px solid #EAE6DF;
     padding: 25px 15px 50px;
-    margin: 0 0 190px;
+    margin: 0 0 90px;
     &:before {
       opacity: .6;
     }
@@ -157,22 +158,19 @@
     margin-bottom: 40px;
   }
   .lost-image {
-
     order: 0;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .lost-wanted--list {
     order: 5;
-    &-item {
-
-    }
   }
 }
+
 @media screen and (max-width: 768px) {
   .lost {
     .container {
       padding-top: 0;
-      padding-bottom: 0;
+      padding-bottom: 50px;
     }
   }
   .lost-square {
