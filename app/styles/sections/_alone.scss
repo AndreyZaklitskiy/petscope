@@ -1,4 +1,4 @@
-.alone {
+.lost {
   position: relative;
   background: #F6F6F6;
   .container {
@@ -20,14 +20,13 @@
     right: 0;
   }
 }
-.alone-text-block {
+.lost-square {
   border: 10px solid #EAE6DF;
   position: relative;
   padding: 45px 45px 45px 390px;
   margin: 0 30px 100px;
   z-index: 1;
-  p {
-    @extend .big-p;
+  &--text {
     margin-bottom: 15px;
   }
   h3 {
@@ -57,11 +56,11 @@
     right: -235px;
   }
 }
-.alone-list-block {
+.lost-wanted {
   @include make-row();
   display: flex;
 }
-.alone-header {
+.lost-wanted--title {
   @include make-col-ready();
   @include make-col(12);
   margin-bottom: 100px;
@@ -73,34 +72,38 @@
     }
   }
 }
-.alone-list {
+.lost-wanted--list {
   @include make-col-ready();
   @include media-breakpoint-up(lg) {
     @include make-col(5);
   };
+  @include media-breakpoint-down(lg) {
+    @include make-col(12);
+  };
   margin: auto 0;
-  &-item {
-    position: relative;
-    margin-bottom: 42px;
-    p {
-      max-width:360px;
-      margin-left: calc(22px + 80px);
-    }
-    &:before {
-      content: '';
-      display: inline-block;
-      background: url("../../images/cross-mark-icon.svg") no-repeat;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 70px;
-      height: 70px;
-      background-size: contain;
-    }
+  
+}
+.lost-wanted--item {
+  position: relative;
+  margin-bottom: 42px;
+  p {
+    max-width:360px;
+    margin-left: calc(22px + 80px);
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    background: url("../../images/cross-mark-icon.svg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background-size: contain;
   }
 }
-.alone-image {
+.lost-image {
   @include make-col-ready();
   @include media-breakpoint-up(lg) {
     @include make-col(7);
@@ -108,20 +111,37 @@
   @include media-breakpoint-down(md) {
     @include make-col(12);
   };
-  display: flex;
+  &--inner {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 0;
+  }
   img {
-    width: auto;
+    width: 100%;
     margin: auto;
   }
 }
 
-@media (max-width: 992px) {
-  .alone {
+@media screen and (max-width: 1200px) {
+  .lost-wanted--item {
+    p {
+      max-width: 992px;
+      margin-left: calc(22px + 60px);
+    }
+    &:before {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .lost {
     .container {
       padding-bottom: 50px;
     }
   }
-  .alone-text-block {
+  .lost-square {
     border: 8px solid #EAE6DF;
     padding: 25px 15px 50px;
     margin: 0 0 190px;
@@ -129,32 +149,33 @@
       opacity: .6;
     }
   }
-  .alone-header {
-    order: 1;
+  .lost-wanted {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lost-wanted--title {
     margin-bottom: 40px;
   }
-  .alone-image {
-    order: 2;
+  .lost-image {
+
+    order: 0;
     margin-bottom: 40px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   }
-  .alone-list {
-    order: 3;
+  .lost-wanted--list {
+    order: 5;
     &-item {
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+
     }
   }
 }
-@media (max-width: 768px) {
-  .alone {
+@media screen and (max-width: 768px) {
+  .lost {
     .container {
       padding-top: 0;
       padding-bottom: 0;
     }
   }
-  .alone-text-block {
+  .lost-square {
     &:before {
       opacity: 1;
       width: 181px;
@@ -170,11 +191,6 @@
       height: 170px;
       top: -130px;
       right: -60px;
-    }
-  }
-  .alone-image {
-    img {
-      width: 100%;
     }
   }
 }
