@@ -81,8 +81,8 @@
   <div class="container">
   <form class="head-form form">
     <h3 class="head-form--desc">Закажите ошейник и получите перчатку для расчесывания питомца!</h3>
-    <input data-validate-field="name" class="name name-input _req _reqq" type="text" placeholder="Ваше имя">
-    <input data-validate-field="tel" class="phone-number phone-input _req _reqq" type="text"
+    <input data-validate-field="name" class="name name-input" type="text" placeholder="Ваше имя">
+    <input data-validate-field="tel" class="phone-number phone-input" type="text"
            placeholder="Ваш телефон">
     <button class="btn btn-buy" type="submit">
       <span>Заказать</span>
@@ -247,40 +247,48 @@
     </div>
   </div>
 </section>
+
 <section class="instructions">
   <div class="container">
     <div class="row">
       <div class="instructions-image">
-        <img src="images/osheinik.jpg" alt="Ошейник">
+        <div class="instructions-image--inner">
+          <img src="images/osheinik.jpg" alt="Ошейник">
+        </div>
       </div>
-      <div class="instructions-list-block">
+      <div class="instructions-block">
         <h2>
           УСТРОИСТВО НЕ БОЛЬШЕ СПИЧЕЧЕНОГО КОРОБКА <span>И В УПРАВЛЕНИЕ НЕ СЛОЖНЕЕ ДЕТСКОЙ ИГРУШКИ</span>
         </h2>
+
+        <div class="instructions-block--img instructions-image--inner">
+          <img src="images/osheinik.jpg" alt="Ошейник">
+        </div>
+
         <ol class="instructions-list">
-          <li class="instructions-list-item">
-            <span class="num">01.</span>
-            <p>Вы получаете GPS-маячок, который можно использовать в комплекте с предлагающимся или уже имеющимся
+          <li class="instructions-item">
+            <span class="instructions-item--num">01.</span>
+            <p class="instructions-item--text">Вы получаете GPS-маячок, который можно использовать в комплекте с предлагающимся или уже имеющимся
               ошейником</p>
           </li>
-          <li class="instructions-list-item">
-            <span class="num">02.</span>
-            <p>Вставляете в маячок SIM-карту оператора вашей местности</p>
+          <li class="instructions-item">
+            <span class="instructions-item--num">02.</span>
+            <p class="instructions-item--text">Вставляете в маячок SIM-карту оператора вашей местности</p>
           </li>
-          <li class="instructions-list-item">
-            <span class="num">03.</span>
-            <p>Активируете трекер по инструкции</p>
+          <li class="instructions-item">
+            <span class="instructions-item--num">03.</span>
+            <p class="instructions-item--text">Активируете трекер по инструкции</p>
           </li>
-          <li class="instructions-list-item">
-            <span class="num">04.</span>
-            <p>Устанавливаете на телефон приложение или используете браузер, чтобы воспользоваться всем функционалом
+          <li class="instructions-item">
+            <span class="instructions-item--num">04.</span>
+            <p class="instructions-item--text">Устанавливаете на телефон приложение или используете браузер, чтобы воспользоваться всем функционалом
               устройства</p>
           </li>
         </ol>
       </div>
-      <div class="if_no_internet lost-text-block">
-        <h3>Если нет доступа к интернету</h3>
-        <p>
+      <div class="instructions-sub">
+        <h3 class="instructions-sub--title">Если нет доступа к интернету</h3>
+        <p class="instructions-sub--text">
           и необходимо срочно узнать местоположение любимца, можно отправить SMS на номер SIM-карты в маячке и получить
           в обратном сообщение координаты
         </p>
@@ -288,6 +296,7 @@
     </div>
   </div>
 </section>
+
 <section class="about_collar">
   <div class="container">
     <h2>
@@ -329,6 +338,7 @@
     </div>
   </div>
 </section>
+
 <section class="buy_agitation">
   <div class="container">
     <div class="row">
