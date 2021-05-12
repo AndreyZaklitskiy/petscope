@@ -1,46 +1,29 @@
 .instructions {
+  position: relative;
   background-color: #fff;
   padding: 125px 0;
-}
-.instructions-image {
-  @include make-col-ready();
-  @include media-breakpoint-up(lg) {
-    @include make-col(6);
-  };
-  @include media-breakpoint-down(md) {
-    @include make-col(12);
-  };
-  display: inline-flex;
-  
-}
-.instructions-block {
-  @include make-col-ready();
-  @include media-breakpoint-up(lg) {
-    @include make-col(6);
-  };
-  @include media-breakpoint-up(xl) {
-    @include make-col(5);
-  };
-  @include media-breakpoint-down(md) {
-    @include make-col(12);
-  };
-  h2 {
-    text-align: left;
-    margin-bottom: 70px;
-  }
-  .instructions-image--inner {
-    display: none;
-    
+  .section-title {
+    &--title {
+      text-align: left;
+      margin-bottom: 70px;
+    }
   }
 }
 .instructions-image--inner {
+  position: relative;
+  margin: auto;
+  z-index: 2;
   img {
     width: 100%;
     height: auto;
     margin: auto;
   }
 }
-
+.instructions-block, .agitation-text {
+  .instructions-image--inner {
+    display: none;
+  }
+}
 .instructions-item {
   display: inline-flex;
   justify-content: flex-start;
@@ -91,7 +74,6 @@
       margin-bottom: 21px;
     }
   }
-  
   .instructions-item {
     p {
       padding-top: 0;

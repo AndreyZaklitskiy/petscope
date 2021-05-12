@@ -1,7 +1,5 @@
-.buy_agitation {
+.agitation {
   background: #FFF8ED;
-  position: relative;
-  padding: 175px 0 0;
   .row {
     margin-bottom: 150px;
   }
@@ -16,33 +14,17 @@
     transform: translateY(-50%);
     width: calc(897px / 2);
     height: 897px;
+    z-index: 0;
   }
 }
-.buy_agitation-image {
-  display: inline-flex;
-  img {
-    width: 100%;
-    height: auto;
-    margin: auto;
-  }
-}
-.buy_agitation-text {
+.agitation-text {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  h2 {
-    text-align: left;
-    margin-bottom: 50px;
-  }
 }
 
-@media (max-width: 1200px) {
-  .buy_agitation {
-    padding: 78px 0 0;
-  }
-}
 @media (max-width: 992px) {
-  .buy_agitation {
+  .agitation {
     &:before {
       transform: rotate(180deg);
       left: auto;
@@ -53,7 +35,7 @@
   }
 }
 @media (max-width: 768px) {
-  .buy_agitation {
+  .agitation {
     .container {
       .row {
         margin-bottom: 50px;

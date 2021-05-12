@@ -68,21 +68,4 @@ new window.JustValidate(selector, {
 validateForms('.consultation-form-2', {name: {required: true, minLength: 3},tel: {required: true}}, '.thanks-popup', 'send goal');
 validateForms('.consultation-form-1', {name: {required: true, minLength: 3},tel: {required: true}}, '.thanks-popup', 'send goal');
 validateForms('.head-form', {name: {required: true, minLength: 3},tel: {required: true}}, '.thanks-popup', 'send goal');
-
-
-
-//--------...--------//
-  let headerList = $('.header-list');
-  function windowWidth() {
-    if ($(window).width() <= '992') {
-      $('.instructions-list-block > h2').after($('.instructions-image'));
-      $('.buy_agitation-text-even > h2').after($('.buy_agitation-image-even'));
-      $('.buy_agitation-text-odd > h2').after($('.buy_agitation-image-odd'));
-    } else if ($(window).width() > '992') {
-      $('header').children('.instructions>.container>.row').closest().prepend($('.instructions-image'));
-      $('.buy_agitation>.container>.row:even').prepend($('.buy_agitation-image-even'));
-      $('.buy_agitation>.container>.row:odd').append($('.buy_agitation-image-odd'));
-    }
-  }
-  windowWidth();
 });
