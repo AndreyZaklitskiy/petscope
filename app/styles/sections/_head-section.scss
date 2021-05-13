@@ -1,23 +1,8 @@
-@mixin before-icon {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-size: contain;
-}
 /*--------TOP SECTION-------------*/
 .head-section {
   min-height: 100vh;
   background: rgba(255, 243, 220, 0.8);
   position: relative;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
   &:before {
     content: '';
     display: inline-block;
@@ -31,8 +16,8 @@
 }
 .head-block {
   margin: auto 0;
+  padding-top: 0;
   .container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 50px;
@@ -40,14 +25,6 @@
 }
 //---------left column--------------
 .head-content {
-  @include make-col-ready();
-  @include media-breakpoint-up(xl) {
-    @include make-col(9);
-  };
-  @include media-breakpoint-down(xl) {
-    @include make-col(12);
-  };
-  position: relative;
   display: flex;
   justify-content: center;
   margin: auto 0;
@@ -56,17 +33,14 @@
     display: flex;
    flex-direction: column;
    justify-content: center;
+   z-index: 3;
   }
   &--title {
-    position: relative;
-    z-index: 2;
     font-family: $bold;
     font-size: 78px;
     color: $accent-green;
   }
   &--title-2 {
-    position: relative;
-    z-index: 2;
     font-family: $bold;
     display: inline-block;
     padding: 5px 20px;
@@ -79,33 +53,17 @@
     margin-bottom: 16px;
     margin-right: auto;
   }
-  &--subtitle {
-    position: relative;
-    z-index: 2;
-    text-align: left;
-    margin-bottom: 56px;
-  }
-  &--desc {
-    position: relative;
-    z-index: 2;
-    max-width: 523px;
+  .section-cont {
+    &--text {
+      max-width: 523px;
+    }
   }
   &--img {
     width: 540px;
-    img {
-      width: 100%;
-    }
   }
 }
 //---------right column-----------
 .head-table--wrap {
-  @include make-col-ready();
-  @include media-breakpoint-up(xl) {
-    @include make-col(3);
-  }
-  @include media-breakpoint-down(xl) {
-    @include make-col(12);
-  }
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
@@ -114,7 +72,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 347px;
-  z-index: 5;
   margin-left: auto;
   &--row {
     position: relative;
@@ -157,19 +114,15 @@
       }
     }
   }
-  &-icon {
-    position: relative;
-  }
   &--txt {
     padding: 10px 32px 10px 98px;
-    display: block;
-    font-family: $regular;
-    font-size: 18px;
   }
 }
 //---------HEADER-FORM---------
+.form-container.container {
+  padding-top: 0;
+}
 .form {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +131,7 @@
     text-align: center;
     color: #FF865F;
     width: 100%;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
   input[type='text'], input[type='tel'] {
     outline: none;
@@ -223,7 +176,6 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     color: #353535;
     span {
-      position: relative;
       margin-right: 30px;
       &:before {
         @include before-icon();
@@ -254,17 +206,22 @@
     background-size: contain;
     width: 264px;
     height: 268px;
+    z-index: 3;
   }
 }
 
 
 
 @media screen and (max-width: 1465px) {
-  /*-------header right column--------*/
-  .head-table {
-    width: 100%;
-    &--row {
-      width: calc(50% - 10px);
+  .head-content {
+    &--img {
+      width: 300px;
+      position: absolute;
+      bottom: 32%;
+      transform: translateY(50%);
+      right: -100px;
+      margin-top: auto;
+      margin-left: auto;
     }
   }
   /*-------header form--------*/
@@ -309,8 +266,11 @@
     &--title-2 {
       font-size: 44px;
     }
-    &--subtitle {
-      margin-bottom: 40px;
+    .section-cont {
+      &--text {
+        min-width: auto;
+        margin-right: auto;
+      }
     }
     &--img {
       width: 500px;
@@ -320,7 +280,13 @@
       right: -100px;
       margin-top: auto;
       margin-left: auto;
-
+    }
+  }
+  /*-------header right column--------*/
+  .head-table {
+    width: 100%;
+    &--row {
+      width: calc(50% - 10px);
     }
   }
   /*-------header form--------*/
@@ -338,15 +304,17 @@
 }
 
 @media screen and (max-width: 992px) {
-  /*-------top section--------*/
-  .head-section {
-    padding-bottom: 50px;
+  .head-block {
+    .container {
+      padding-top: 0;
+    }
   }
   /*-------top left block--------*/
   .head-content {
-    margin-bottom: 50px;
-    &--desc {
-      max-width: 350px;
+    .section-cont {
+      &--text {
+        max-width: 350px;
+      }
     }
     &--img {
       width: 360px;
@@ -370,11 +338,13 @@
       font-size: 30px;
       padding: 4px 18px;
     }
-    &--subtitle {
-      max-width: 200px;
-    }
-    &--desc {
-      max-width: 200px;
+    .section-cont {
+      &--title {
+        max-width: 200px;
+      }
+      &--text {
+        max-width: 200px;
+      }
     }
     &--img {
       width: 360px;
@@ -428,11 +398,13 @@
     &--title {
       font-size: 34px;
     }
-    &--subtitle {
-      max-width: 162px;
-    }
-    &--desc {
-      max-width: 162px;
+    .section-cont {
+      &--title {
+        max-width: 162px;
+      }
+      &--text {
+        max-width: 162px;
+      }
     }
     &--img {
       width: 252px;

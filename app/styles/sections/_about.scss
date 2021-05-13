@@ -1,0 +1,187 @@
+.about {
+  position: relative;
+  background: url("../../images/map.svg") $green no-repeat;
+  background-position: center 0;
+  background-size: contain;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 874px;
+    width: calc(874px / 2);
+    background: url("../../images/elipse.svg") center no-repeat;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 100px;
+  }
+}
+.about-map {
+  padding: 150px 0 150px;
+  .container {
+    min-height: 40vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &--title {
+    max-width: 430px;
+    color: $white;
+    span {
+      color: #ffe55d;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 256px;
+      height: 346px;
+      animation: jump 1s ease infinite;
+    }
+  }
+}
+.map-title {
+  &--1 {
+    padding-bottom: 350px;
+    margin-bottom: auto;
+    &:before {
+      background: url("../../images/locationdog.png") no-repeat;
+      background-size: contain;
+      right: -10%;
+      bottom: -50px;
+    }
+  }
+  &--2 {
+    margin-left: auto;
+    margin-top: auto;
+    padding-top: 350px;
+    &:before {
+      background: url("../../images/locationcat.png") no-repeat;
+      background-size: contain;
+      right: 10%;
+      top: -50px;
+    }
+  }
+}
+.about-cards {
+  .container {
+    padding-top: 50px;
+  }
+  .section-cont {
+    &--title {
+      width: 100%;
+      text-align: center;
+      color: $white;
+      margin-bottom: 100px;
+    }
+  }
+}
+.about-card {
+  min-height: 290px;
+  padding: 50px 40px 40px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  &--title {
+    margin-bottom: 40px;
+    z-index: 1;
+  }
+  &--text {
+    line-height: 28px;
+    z-index: 1;
+  }
+  &--number {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: $bold;
+    font-size: 144px;
+    color: #f1f1f1;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .about-card {
+    padding: 35px 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about {
+    &:before {
+      display: none;
+    }
+  }
+  .about-map {
+    padding: 50px 0 50px;
+    .container {
+      flex-direction: column;
+    }
+    &--title {
+      &:before {
+        width: 110px;
+        height: 190px;
+      }
+    }
+  }
+  .map-title {
+    &--1 {
+      padding-bottom: 150px;
+      &:before {
+        right: auto;
+        left: 0;
+        bottom: -100px;
+      }
+    }
+    &--2 {
+      padding-top: 150px;
+      &:before {
+        right: 20%;
+        top: -100px;
+      }
+    }
+  }
+  .about-cards {
+    .section-cont--title {
+      margin-bottom: 44px;
+    }
+  }
+  .about-card {
+    min-height: 260px;
+    padding: 28px;
+    background-color: #fff;
+    margin-bottom: 24px;
+    &--title {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 0 0;
+  }
+  .about-map {
+    .container {
+      flex-direction: column;
+    }
+  }
+  .map-title {
+    &--1 {
+      &:before {
+        right: 0;
+        left: auto;
+        bottom: -50px;
+      }
+    }
+    &--2 {
+      &:before {
+        right: auto;
+        left: 0;
+        top: -64px;
+      }
+    }
+    &:before {
+      width: 110px;
+      height: 190px;
+    }
+  }
+}

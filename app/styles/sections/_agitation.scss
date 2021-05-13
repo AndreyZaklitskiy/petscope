@@ -1,7 +1,13 @@
 .agitation {
   background: #FFF8ED;
+  .container {
+    flex-direction: column;
+  }
   .row {
     margin-bottom: 150px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &:before {
     content: '';
