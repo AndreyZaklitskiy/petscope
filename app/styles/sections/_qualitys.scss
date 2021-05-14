@@ -2,23 +2,25 @@
   background: url("../../images/dogs-bg-fil.jpg") center no-repeat;
   background-size: cover;
   padding: 150px 0 250px;
-  position: relative;
-  .section-title {
-    margin-bottom: 106px;
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+  }
+  .section-cont {
+    
     &--title {
       color: #445544;
+      text-align: center;
+      margin-bottom: 100px;
     }
   }
   &-item {
-    position: relative;
     text-align: center;
     &--img {
       width: 80px;
       height: 80px;
       margin: 0 auto 35px;
-      img {
-        z-index: 10;
-      }
     }
     &--title {
       min-height: 48px;
@@ -50,16 +52,16 @@
 @media screen and (max-width: 992px) {
   .qualitys {
     background: none;
-    padding: 50px 0 15px;
-    .section-title {
-      margin-bottom: 40px;
+    padding: 0;
+    .section-cont {
+      &--title {
+        margin-bottom: 40px;
+      } 
     }
     &-item {
-      position: relative;
-      text-align: center;
       margin-bottom: 75px;
       &--img {
-        margin: 0 auto 18px;
+        margin: 0 auto 30px;
       }
       &--title {
         margin-bottom: 30px;

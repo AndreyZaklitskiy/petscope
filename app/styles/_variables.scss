@@ -25,3 +25,16 @@ $container-max-widths: (
   lg: 992px,
   xl: 1465px
 );
+
+@mixin before-icon {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-size: contain;
+}

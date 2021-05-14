@@ -1,3 +1,6 @@
+* {
+  position: relative;
+}
 html {
   position: relative;
   height: 100vh;
@@ -11,6 +14,15 @@ body {
   min-height: 100%;
   line-height: 1.2;
 }
+/*----------------CONTAINER STYLES----------------*/
+.container {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   display: flex;
+   z-index: 2;
+
+}
+
 .main-text {
   font-family: $bold;
   font-size: 36px;
@@ -18,17 +30,20 @@ body {
   color: $text-dark;
 }
 p {
+  display: block;
   position: relative;
   font-size: 18px;
   font-family: $regular;
   color: $text-dark;
   line-height: 22px;
 }
+// ---
 .big-p {
-  font-family: $light;
-  font-size: 28px;
-  line-height: 44px;
+  // font-family: $light;
+  // font-size: 28px;
+  // line-height: 44px;
 }
+// ---
 h2 {
   color: $text-dark;
   font-family: $bold;
@@ -53,6 +68,27 @@ h4 {
   line-height: 24px;
   color: #313131;
 }
+/*----------------SECTION CONT : TITLE, TEXT----------------*/
+.section-cont {
+  &--title {
+    // h2
+    position: relative;
+    text-align: left;
+    margin-bottom: 56px;
+  }
+  &--text {
+    // "big-p"
+    font-family: $light;
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
+
+img {
+  width: 100%;
+  height: about;
+}
+
 
 .js-validate-error-label {
   display: none;
@@ -61,7 +97,6 @@ h4 {
 .container.container-big {
   max-width: 1600px;
 }
-
 
 @keyframes jump {
   0% {
@@ -75,18 +110,30 @@ h4 {
   }
 }
 
+@media (min-width: 1400px) {
+  .container {
+      max-width: 1465px;
+  } 
+}
 
 @media (max-width: 1200px) {
   h2 {
     font-size: 30px;
   }
 }
+
 @media (max-width: 992px) {
   h4 {
     font-size: 18px;
     line-height: 22px;
   }
+  .section-cont {
+    &--title {
+      margin-bottom: 40px;
+    }
+  }
 }
+
 @media (max-width: 768px) {
   h2 {
     font-size: 20px;
@@ -100,11 +147,17 @@ h4 {
   p {
     font-size: 16px;
   }
-  p.big-p {
-    font-size: 16px;
-    line-height: 22px;
+  .section-cont {
+    &--title {
+
+    }
+    &--text {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
+
 @media (max-width: 480px) {
   .btn-header {
     border: 2px solid $green;

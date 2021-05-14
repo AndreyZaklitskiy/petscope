@@ -15,18 +15,13 @@
 @import "sections/header";
 @import "sections/alone";
 @import "sections/lost";
+@import "sections/about";
+
 @import "sections/form-section";
 @import "sections/instructions";
 @import "sections/agitation";
 @import "sections/qualitys";
-@import "sections/dont_wait";
+@import "sections/delivery";
 @import "sections/footer";
 
 
-
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1465px;
-    } 
-}
