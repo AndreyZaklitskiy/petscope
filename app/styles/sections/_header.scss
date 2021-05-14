@@ -161,7 +161,8 @@
       -o-transition: all .3s;
       transition: all .3s;
       &.is-active {
-        right: 0;
+        left: 0;
+        top: 0;
         z-index: 99;
       }
       .header-menu--list {
@@ -178,8 +179,10 @@
       .phone {
         position: absolute;
         bottom: 70px;
-        margin: 0 auto;
+        right: 50%;
+        transform: translateX(50%);
         display: block;
+        text-align: center;
         color: $white;
       }
     }
