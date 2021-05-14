@@ -12,6 +12,7 @@
   .orange {
     color: $orange;
   }
+
   &:before {
     content: "";
     display: inline-block;
@@ -159,6 +160,7 @@
       height: 238px;
     }
   }
+
   .table-button-block {
     display: block;
   }
