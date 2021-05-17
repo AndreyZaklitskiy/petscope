@@ -12,6 +12,16 @@ let petscope = {
   },
 
   hamburgerHandler() {
+
+    // let hamburger = document.querySelector('.hamburger');
+    // let menu = document.querySelector('.header-menu');
+    // hamburger.addEventListener('click', ()=> {
+    //     hamburger.classList.toggle('is-active');
+
+    //     menu.classList.toggle('is-active');
+    // })
+
+
     $('.hamburger').on('click', () => {
       $('.hamburger').toggleClass('is-active');
       $('.header-menu').toggleClass('is-active');
@@ -34,8 +44,6 @@ let petscope = {
 
 
 ////////////////////////
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {

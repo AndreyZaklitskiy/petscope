@@ -66,13 +66,16 @@
     .hamburger {
       order: 3;
     }
+    .header-menu--item {
+      margin-bottom: 10px;
+    }
   }
   .footer_phone-button_wrap {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
-  .footer .header {
+  .footer.header {
     .logo {
       width: 158px;
       height: 36px;

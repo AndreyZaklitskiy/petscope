@@ -41,14 +41,12 @@
     }
   }
   .header-menu--item {
-    position: relative;
     margin-right: 18px;
     font-family: $bold;
     font-size: 16px;
     a {
       text-decoration: none;
       color: $text-dark;
-      position: relative;
       padding: 15px;
       cursor: pointer;
     }
@@ -99,7 +97,7 @@
   /*--------HAMBURGER-------------*/
 .hamburger {
     display: none;
-    z-index: 11;
+    z-index: 999999;
   }
   .hamburger-box {
     width: 24px;
@@ -131,6 +129,7 @@
 @media screen and (max-width: 992px) {
     /*-------header--------*/
     .header {
+      z-index: 10;
       .hamburger {
         display: block;
         z-index: 100;
@@ -150,22 +149,22 @@
       }
     }
     .header-menu {
+      z-index: 99;
       margin-top: 0;
-      z-index: 10;
       position: fixed;
-      left: -100vw;
+      top: -100vh;
       background-color: $green;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -ms-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
       &.is-active {
         left: 0;
         top: 0;
-        z-index: 99;
       }
       .header-menu--list {
+        z-index: 100;
         width: 100vw;
         height: 100vh;
         flex-direction: column;
