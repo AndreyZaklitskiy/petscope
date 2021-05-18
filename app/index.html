@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <section class="head-section">
+    <section id="main" class="head-section">
       <header class="header">
         <div class="container container-big">
           <a href="#" class="header-logo logo">
@@ -25,19 +25,18 @@
           </a>
           <nav class="header-menu menu">
             <ul class="header-menu--list">
-              <li class="header-menu--item active"><a href="#">Главная</a></li>
-              <li class="header-menu--item"><a href="#">Как работает</a></li>
-              <li class="header-menu--item"><a href="#">Преимущества</a></li>
-              <li class="header-menu--item"><a href="#">Доставка</a></li>
-              <li class="header-menu--item"><a href="#">Контакты</a></li>
+              <li class="header-menu--item active"><a href="#main" class="scroll-link">Главная</a></li>
+              <li class="header-menu--item "><a href="#instruction" class="scroll-link">Как работает</a></li>
+              <li class="header-menu--item "><a href="#qualitys" class="scroll-link">Преимущества</a></li>
+              <li class="header-menu--item "><a href="#delivery" class="scroll-link">Доставка</a></li>
+              <li class="header-menu--item "><a href="#contacts" class="scroll-link">Контакты</a></li>
               <li class="header-menu--item phone">
                 <a href="tel: +7 455 345 23 00">7 455 345 23 00</a>
               </li>
             </ul>
           </nav>
           <div class="header-phone phone">
-            <a class="header-phone--link" href="tel: +7 455 345 23 00"
-              >7 455 345 23 00</a
+            <a class="header-phone--link" href="tel: +7 455 345 23 00">7 455 345 23 00</a
             >
           </div>
           <div
@@ -308,7 +307,7 @@
 
     <section class="instructions">
       <div class="container">
-        <div class="row">
+        <div id="instruction" class="row">
           <div class="instructions-image col-lg-6">
             <div class="instructions-image--inner">
               <img src="images/osheinik.jpg" alt="Ошейник" />
@@ -369,7 +368,7 @@
     </section>
 
     <section class="qualitys">
-      <div class="container">
+      <div id="qualitys" class="container">
         <div class="section-cont">
           <h2 class="section-cont--title">
             GPS-ТРЕКЕР НА ВСЕ СЛУЧАИ ЖИЗНИ ПИТОМЦА
@@ -498,7 +497,7 @@
             безоблачное детсво.
           </p>
         </div>
-        <div class="section-cont mb-0">
+        <div  id="delivery" class="section-cont mb-0">
           <h2 class="section-cont--title">
             ДОСТАВКА В ЛЮБУЮ ТОЧКУ РОССИИ
           </h2>
@@ -563,7 +562,7 @@
       </div>
     </section>
 
-    <section class="form-section form-section-green">
+    <section id="contacts" class="form-section form-section-green">
       <div class="container">
         <div class="row">
           <div class="form-section-img">
@@ -645,7 +644,7 @@
           </div>
       </div>
     </footer>
-
+ 
     <script src="scripts/modernizr.js"></script>
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- <script src="/node_modules/aos/dist/aos.js"></script> -->

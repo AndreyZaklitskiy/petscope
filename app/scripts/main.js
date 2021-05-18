@@ -1,6 +1,44 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', function() {
+/*----------smooth scroll-------------*/
+$('a.scroll-link').on('click', function(event) {
+  let $anchor = $(this);
+  $('.hamburger').removeClass('is-active');
+  $('.header-menu').removeClass('is-active');
+  
+  $('html, body')
+    .stop()
+    .animate(
+      {
+        scrollTop: $($anchor.attr('href')).offset().top - 75,
+      },
+      {
+        duration : 2000,
+        speecialEasing : {
+          width : 'linear',
+          height : 'easeInOutCubic'
+        },
+      }
+    )
+    event.preventDefault();
+});
+
+$('.header-menu--item').on('click', function(e) {
+  $(this).addClass('active');
+  $(this).siblings('.header-menu--item').removeClass('active');
+});
+
+/*-------------fixed header----------------*/
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+  if (wScroll > 20) {
+    $('header').addClass('scroll');
+  }
+  else {
+    $('header').removeClass('scroll');
+  }
+});
 /*------------hamburger--------------*/
 $('.hamburger').on('click', () => {
   $('.hamburger').toggleClass('is-active');
