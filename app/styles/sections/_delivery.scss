@@ -125,7 +125,8 @@
   left: 0;
   top: 100%;
   width: 100%;
-  background-color: grey;
+  margin-top: 2px;
+  background-color: #ececec;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -134,7 +135,7 @@
 }
 .table-button-list-item {
   padding: 15px 0;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   span {
     display: inline-block;
     font-family: $bold;

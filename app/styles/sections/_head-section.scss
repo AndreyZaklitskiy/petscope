@@ -369,6 +369,7 @@
     input[type='text'], input[type='tel'] {
       font-size: 20px;
       margin-right: 0;
+      height: 65px;
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         font-size: 20px;
       }

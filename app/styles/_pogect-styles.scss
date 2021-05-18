@@ -20,9 +20,10 @@ body {
    padding-bottom: 100px;
    display: flex;
    z-index: 2;
-
 }
-
+.container.container-big {
+  max-width: 1600px;
+}
 .main-text {
   font-family: $bold;
   font-size: 36px;
@@ -37,13 +38,6 @@ p {
   color: $text-dark;
   line-height: 22px;
 }
-// ---
-.big-p {
-  // font-family: $light;
-  // font-size: 28px;
-  // line-height: 44px;
-}
-// ---
 h2 {
   color: $text-dark;
   font-family: $bold;
@@ -71,31 +65,23 @@ h4 {
 /*----------------SECTION CONT : TITLE, TEXT----------------*/
 .section-cont {
   &--title {
-    // h2
     position: relative;
     text-align: left;
     margin-bottom: 56px;
   }
   &--text {
-    // "big-p"
     font-family: $light;
     font-size: 28px;
     line-height: 44px;
   }
 }
-
 img {
   width: 100%;
   height: about;
 }
 
-
 .js-validate-error-label {
   display: none;
-}
-
-.container.container-big {
-  max-width: 1600px;
 }
 
 @keyframes jump {
@@ -123,6 +109,10 @@ img {
 }
 
 @media (max-width: 992px) {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   h4 {
     font-size: 18px;
     line-height: 22px;

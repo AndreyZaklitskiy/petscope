@@ -105,6 +105,11 @@
     padding: 35px 20px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .about {
+    background-position: center 100px;
+  }
+}
 @media screen and (max-width: 992px) {
   .about {
     &:before {
@@ -158,6 +163,7 @@
 @media screen and (max-width: 768px) {
   .about {
     padding: 0 0;
+    background-position: center 100px;
   }
   .about-map {
     .container {
@@ -183,5 +189,10 @@
       width: 110px;
       height: 190px;
     }
+  }
+}
+@media screen and (max-width: 575px) {
+  .about {
+    background-position: center 200px;
   }
 }
