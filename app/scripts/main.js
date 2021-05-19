@@ -6,7 +6,10 @@ $('a.scroll-link').on('click', function(event) {
   let $anchor = $(this);
   $('.hamburger').removeClass('is-active');
   $('.header-menu').removeClass('is-active');
-  
+  let prnt = $(this).parent();
+  prnt.addClass('active');
+  prnt.siblings('.header-menu--item').removeClass('active');
+
   $('html, body')
     .stop()
     .animate(
@@ -24,19 +27,17 @@ $('a.scroll-link').on('click', function(event) {
     event.preventDefault();
 });
 
-$('.header-menu--item').on('click', function(e) {
-  $(this).addClass('active');
-  $(this).siblings('.header-menu--item').removeClass('active');
-});
-
 /*-------------fixed header----------------*/
 $(window).scroll(function(){
   var wScroll = $(this).scrollTop();
+  let height = $('.header').height();
   if (wScroll > 20) {
     $('header').addClass('scroll');
+    $('.head-block').css('padding-top', height);
   }
   else {
     $('header').removeClass('scroll');
+    $('.head-block').css('padding-top', 0);
   }
 });
 /*------------hamburger--------------*/
