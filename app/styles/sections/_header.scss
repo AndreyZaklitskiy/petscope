@@ -63,6 +63,10 @@
       padding: 15px;
       cursor: pointer;
     }
+    &:after {
+      width: 0;
+      transition: all .5s;
+    }
   }
   .header-menu--item.active {
     &:after {
@@ -77,6 +81,7 @@
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
       border-radius: 50px;
+      transition: all .5s;
     }
   }
   .phone {
@@ -123,6 +128,15 @@
     background-color: $text-dark;
     transition: all .5s;
   }
+
+
+
+
+
+
+
+
+
   @media screen and (max-width: 1600px) {
     /*-------header--------*/
     .logo {
